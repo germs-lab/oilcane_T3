@@ -1,0 +1,43 @@
+---
+title: "16Soilcane3timepoint"
+format:
+  html:
+    theme: default
+---
+## load libraries and data
+```{r}
+library(phyloseq)
+library(Biostrings) # for renaming ASVs
+
+# Timepoint 3
+samdf <- read.csv("/Users/loriensmacbook/Box Sync/Bioinformatics/Oilcane_2025/psssu_metadata.csv")
+seqtab.nochim <- readRDS("/Users/loriensmacbook/Box Sync/Bioinformatics/Oilcane_2025/seqtab.nochim.rds")
+taxa <- readRDS("/Users/loriensmacbook/Box Sync/Bioinformatics/Oilcane_2025/taxa.rds")
+
+# Jihoon's timepoints 1 and 2
+psssu <- readRDS("/Users/loriensmacbook/Box Sync/Bioinformatics/Oilcane_2025/ps-ssu.rds")
+```
+
+## Make phyloseq objects
+```{r}
+# Timepoint 3
+row.names(samdf) <- samdf$Sequence_ID
+ps <- phyloseq(otu_table(seqtab.nochim, taxa_are_rows=FALSE), tax_table(taxa), sample_data(samdf))
+
+dna <- Biostrings::DNAStringSet(taxa_names(ps))
+names(dna) <- taxa_names(ps)
+ps <- merge_phyloseq(ps, dna)
+taxa_names(ps) <- paste0("ASV", seq(ntaxa(ps)))
+ps
+
+# Add sample data to Jihoon's phyloseq object
+psssu <- merge_phyloseq(psssu, sample_data(samdf))
+psssu
+```
+
+## Merge studies
+```{r}
+ps1 <- merge_phyloseq(psssu, ps)
+ps1
+```
+

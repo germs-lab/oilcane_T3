@@ -1,0 +1,329 @@
+﻿sample_ID,date_collected,genotype,growing_stage,sampling_time,growing_condition,original_materials,replicate,Sequence_ID
+L1_T3_FRAS_01,4-Nov-20,Lineage 1,Maturity,T3,Field,Root-associated soils,1,Oil_FRAS_131
+L1_T3_FRAS_02,4-Nov-20,Lineage 1,Maturity,T3,Field,Root-associated soils,2,Oil_FRAS_132
+L1_T3_FRAS_03,4-Nov-20,Lineage 1,Maturity,T3,Field,Root-associated soils,3,Oil_FRAS_133
+L1_T3_FRAS_04,4-Nov-20,Lineage 1,Maturity,T3,Field,Root-associated soils,4,Oil_FRAS_134
+L2_T3_FRAS_01,4-Nov-20,Lineage 2,Maturity,T3,Field,Root-associated soils,1,Oil_FRAS_231
+L2_T3_FRAS_02,4-Nov-20,Lineage 2,Maturity,T3,Field,Root-associated soils,2,Oil_FRAS_232
+L2_T3_FRAS_03,4-Nov-20,Lineage 2,Maturity,T3,Field,Root-associated soils,3,Oil_FRAS_233
+L2_T3_FRAS_04,4-Nov-20,Lineage 2,Maturity,T3,Field,Root-associated soils,4,Oil_FRAS_234
+L3_T3_FRAS_01,4-Nov-20,Lineage 3,Maturity,T3,Field,Root-associated soils,1,Oil_FRAS_331
+L3_T3_FRAS_02,4-Nov-20,Lineage 3,Maturity,T3,Field,Root-associated soils,2,Oil_FRAS_332
+L3_T3_FRAS_03,4-Nov-20,Lineage 3,Maturity,T3,Field,Root-associated soils,3,Oil_FRAS_333
+L3_T3_FRAS_04,4-Nov-20,Lineage 3,Maturity,T3,Field,Root-associated soils,4,Oil_FRAS_334
+L4_T3_FRAS_01,4-Nov-20,Lineage 4,Maturity,T3,Field,Root-associated soils,1,Oil_FRAS_431
+L4_T3_FRAS_02,4-Nov-20,Lineage 4,Maturity,T3,Field,Root-associated soils,2,Oil_FRAS_432
+L4_T3_FRAS_03,4-Nov-20,Lineage 4,Maturity,T3,Field,Root-associated soils,3,Oil_FRAS_433
+L4_T3_FRAS_04,4-Nov-20,Lineage 4,Maturity,T3,Field,Root-associated soils,4,Oil_FRAS_434
+L5_T3_FRAS_01,4-Nov-20,Lineage 5,Maturity,T3,Field,Root-associated soils,1,Oil_FRAS_531
+L5_T3_FRAS_02,4-Nov-20,Lineage 5,Maturity,T3,Field,Root-associated soils,2,Oil_FRAS_532
+L5_T3_FRAS_03,4-Nov-20,Lineage 5,Maturity,T3,Field,Root-associated soils,3,Oil_FRAS_533
+L5_T3_FRAS_04,4-Nov-20,Lineage 5,Maturity,T3,Field,Root-associated soils,4,Oil_FRAS_534
+WT_T3_FRAS_01,4-Nov-20,Wild type,Maturity,T3,Field,Root-associated soils,1,Oil_FRAS_W31
+WT_T3_FRAS_02,4-Nov-20,Wild type,Maturity,T3,Field,Root-associated soils,2,Oil_FRAS_W32
+WT_T3_FRAS_03,4-Nov-20,Wild type,Maturity,T3,Field,Root-associated soils,3,Oil_FRAS_W33
+WT_T3_FRAS_04,4-Nov-20,Wild type,Maturity,T3,Field,Root-associated soils,4,Oil_FRAS_W34
+L1_T3_FS_01,4-Nov-20,Lineage 1,Maturity,T3,Field,Bulk soil,1,Oil_FS_131
+L1_T3_FS_02,4-Nov-20,Lineage 1,Maturity,T3,Field,Bulk soil,2,Oil_FS_132
+L1_T3_FS_03,4-Nov-20,Lineage 1,Maturity,T3,Field,Bulk soil,3,Oil_FS_133
+L1_T3_FS_04,4-Nov-20,Lineage 1,Maturity,T3,Field,Bulk soil,4,Oil_FS_134
+L2_T3_FS_01,4-Nov-20,Lineage 2,Maturity,T3,Field,Bulk soil,1,Oil_FS_231
+L2_T3_FS_02,4-Nov-20,Lineage 2,Maturity,T3,Field,Bulk soil,2,Oil_FS_232
+L2_T3_FS_03,4-Nov-20,Lineage 2,Maturity,T3,Field,Bulk soil,3,Oil_FS_233
+L2_T3_FS_04,4-Nov-20,Lineage 2,Maturity,T3,Field,Bulk soil,4,Oil_FS_234
+L3_T3_FS_01,4-Nov-20,Lineage 3,Maturity,T3,Field,Bulk soil,1,Oil_FS_331
+L3_T3_FS_02,4-Nov-20,Lineage 3,Maturity,T3,Field,Bulk soil,2,Oil_FS_332
+L3_T3_FS_03,4-Nov-20,Lineage 3,Maturity,T3,Field,Bulk soil,3,Oil_FS_333
+L3_T3_FS_04,4-Nov-20,Lineage 3,Maturity,T3,Field,Bulk soil,4,Oil_FS_334
+L4_T3_FS_01,4-Nov-20,Lineage 4,Maturity,T3,Field,Bulk soil,1,Oil_FS_431
+L4_T3_FS_02,4-Nov-20,Lineage 4,Maturity,T3,Field,Bulk soil,2,Oil_FS_432
+L4_T3_FS_03,4-Nov-20,Lineage 4,Maturity,T3,Field,Bulk soil,3,Oil_FS_433
+L4_T3_FS_04,4-Nov-20,Lineage 4,Maturity,T3,Field,Bulk soil,4,Oil_FS_434
+L5_T3_FS_01,4-Nov-20,Lineage 5,Maturity,T3,Field,Bulk soil,1,Oil_FS_531
+L5_T3_FS_02,4-Nov-20,Lineage 5,Maturity,T3,Field,Bulk soil,2,Oil_FS_532
+L5_T3_FS_03,4-Nov-20,Lineage 5,Maturity,T3,Field,Bulk soil,3,Oil_FS_533
+L5_T3_FS_04,4-Nov-20,Lineage 5,Maturity,T3,Field,Bulk soil,4,Oil_FS_534
+WT_T3_FS_01,4-Nov-20,Wild type,Maturity,T3,Field,Bulk soil,1,Oil_FS_W31
+WT_T3_FS_02,4-Nov-20,Wild type,Maturity,T3,Field,Bulk soil,2,Oil_FS_W32
+WT_T3_FS_03,4-Nov-20,Wild type,Maturity,T3,Field,Bulk soil,3,Oil_FS_W33
+WT_T3_FS_04,4-Nov-20,Wild type,Maturity,T3,Field,Bulk soil,4,Oil_FS_W34
+L1_T3_GHRAS_01,4-Nov-20,Lineage 1,Maturity,T3,Greenhouse,Root-associated soils,1,Oil_GHRAS_131
+L1_T3_GHRAS_02,4-Nov-20,Lineage 1,Maturity,T3,Greenhouse,Root-associated soils,2,Oil_GHRAS_132
+L1_T3_GHRAS_03,4-Nov-20,Lineage 1,Maturity,T3,Greenhouse,Root-associated soils,3,Oil_GHRAS_133
+L1_T3_GHRAS_04,4-Nov-20,Lineage 1,Maturity,T3,Greenhouse,Root-associated soils,4,Oil_GHRAS_134
+L2_T3_GHRAS_01,4-Nov-20,Lineage 2,Maturity,T3,Greenhouse,Root-associated soils,1,Oil_GHRAS_231
+L2_T3_GHRAS_02,4-Nov-20,Lineage 2,Maturity,T3,Greenhouse,Root-associated soils,2,Oil_GHRAS_232
+L2_T3_GHRAS_03,4-Nov-20,Lineage 2,Maturity,T3,Greenhouse,Root-associated soils,3,Oil_GHRAS_233
+L2_T3_GHRAS_04,4-Nov-20,Lineage 2,Maturity,T3,Greenhouse,Root-associated soils,4,Oil_GHRAS_234
+L3_T3_GHRAS_01,4-Nov-20,Lineage 3,Maturity,T3,Greenhouse,Root-associated soils,1,Oil_GHRAS_331
+L3_T3_GHRAS_02,4-Nov-20,Lineage 3,Maturity,T3,Greenhouse,Root-associated soils,2,Oil_GHRAS_332
+L3_T3_GHRAS_03,4-Nov-20,Lineage 3,Maturity,T3,Greenhouse,Root-associated soils,3,Oil_GHRAS_333
+L3_T3_GHRAS_04,4-Nov-20,Lineage 3,Maturity,T3,Greenhouse,Root-associated soils,4,Oil_GHRAS_334
+L4_T3_GHRAS_01,4-Nov-20,Lineage 4,Maturity,T3,Greenhouse,Root-associated soils,1,Oil_GHRAS_431
+L4_T3_GHRAS_02,4-Nov-20,Lineage 4,Maturity,T3,Greenhouse,Root-associated soils,2,Oil_GHRAS_432
+L4_T3_GHRAS_03,4-Nov-20,Lineage 4,Maturity,T3,Greenhouse,Root-associated soils,3,Oil_GHRAS_433
+L4_T3_GHRAS_04,4-Nov-20,Lineage 4,Maturity,T3,Greenhouse,Root-associated soils,4,Oil_GHRAS_434
+WT_T3_GHRAS_01,4-Nov-20,Wild type,Maturity,T3,Greenhouse,Root-associated soils,1,Oil_GHRAS_W31
+WT_T3_GHRAS_02,4-Nov-20,Wild type,Maturity,T3,Greenhouse,Root-associated soils,2,Oil_GHRAS_W32
+WT_T3_GHRAS_03,4-Nov-20,Wild type,Maturity,T3,Greenhouse,Root-associated soils,3,Oil_GHRAS_W33
+WT_T3_GHRAS_04,4-Nov-20,Wild type,Maturity,T3,Greenhouse,Root-associated soils,4,Oil_GHRAS_W34
+L1_T3_GHS_01,4-Nov-20,Lineage 1,Maturity,T3,Greenhouse,Bulk soil,1,Oil_GHS_131
+L1_T3_GHS_02,4-Nov-20,Lineage 1,Maturity,T3,Greenhouse,Bulk soil,2,Oil_GHS_132
+L1_T3_GHS_03,4-Nov-20,Lineage 1,Maturity,T3,Greenhouse,Bulk soil,3,Oil_GHS_133
+L1_T3_GHS_04,4-Nov-20,Lineage 1,Maturity,T3,Greenhouse,Bulk soil,4,Oil_GHS_134
+L2_T3_GHS_01,4-Nov-20,Lineage 2,Maturity,T3,Greenhouse,Bulk soil,1,Oil_GHS_231
+L2_T3_GHS_02,4-Nov-20,Lineage 2,Maturity,T3,Greenhouse,Bulk soil,2,Oil_GHS_232
+L2_T3_GHS_03,4-Nov-20,Lineage 2,Maturity,T3,Greenhouse,Bulk soil,3,Oil_GHS_233
+L2_T3_GHS_04,4-Nov-20,Lineage 2,Maturity,T3,Greenhouse,Bulk soil,4,Oil_GHS_234
+L3_T3_GHS_01,4-Nov-20,Lineage 3,Maturity,T3,Greenhouse,Bulk soil,1,Oil_GHS_331
+L3_T3_GHS_02,4-Nov-20,Lineage 3,Maturity,T3,Greenhouse,Bulk soil,2,Oil_GHS_332
+L3_T3_GHS_03,4-Nov-20,Lineage 3,Maturity,T3,Greenhouse,Bulk soil,3,Oil_GHS_333
+L3_T3_GHS_04,4-Nov-20,Lineage 3,Maturity,T3,Greenhouse,Bulk soil,4,Oil_GHS_334
+L4_T3_GHS_01,4-Nov-20,Lineage 4,Maturity,T3,Greenhouse,Bulk soil,1,Oil_GHS_431
+L4_T3_GHS_02,4-Nov-20,Lineage 4,Maturity,T3,Greenhouse,Bulk soil,2,Oil_GHS_432
+L4_T3_GHS_03,4-Nov-20,Lineage 4,Maturity,T3,Greenhouse,Bulk soil,3,Oil_GHS_433
+L4_T3_GHS_04,4-Nov-20,Lineage 4,Maturity,T3,Greenhouse,Bulk soil,4,Oil_GHS_434
+WT_T3_GHS_01,4-Nov-20,Wild type,Maturity,T3,Greenhouse,Bulk soil,1,Oil_GHS_W31
+WT_T3_GHS_02,4-Nov-20,Wild type,Maturity,T3,Greenhouse,Bulk soil,2,Oil_GHS_W32
+WT_T3_GHS_03,4-Nov-20,Wild type,Maturity,T3,Greenhouse,Bulk soil,3,Oil_GHS_W33
+WT_T3_GHS_04,4-Nov-20,Wild type,Maturity,T3,Greenhouse,Bulk soil,4,Oil_GHS_W34
+L1_T2_FL_01,4-Aug-20,Lineage 1,Established,T2,Field,Leaves,1,V4_515F_New_V4_806R_New-L1_T2_FL_01_TGATACCACT
+L1_T2_FL_02,4-Aug-20,Lineage 1,Established,T2,Field,Leaves,2,V4_515F_New_V4_806R_New-L1_T2_FL_02_GTACCTCGAT
+L1_T2_FL_03,6-Aug-20,Lineage 1,Established,T2,Field,Leaves,3,V4_515F_New_V4_806R_New-L1_T2_FL_03_CTTGCAGAGT
+L1_T2_FL_04,6-Aug-20,Lineage 1,Established,T2,Field,Leaves,4,V4_515F_New_V4_806R_New-L1_T2_FL_04_TCTTCTATCG
+L1_T2_FR_01,4-Aug-20,Lineage 1,Established,T2,Field,Roots,1,V4_515F_New_V4_806R_New-L1_T2_FR_01_GACATCGTGT
+L1_T2_FR_02,4-Aug-20,Lineage 1,Established,T2,Field,Roots,2,V4_515F_New_V4_806R_New-L1_T2_FR_02_GCATCCGTGT
+L1_T2_FR_03,6-Aug-20,Lineage 1,Established,T2,Field,Roots,3,V4_515F_New_V4_806R_New-L1_T2_FR_03_CCGATATATC
+L1_T2_FR_04,6-Aug-20,Lineage 1,Established,T2,Field,Roots,4,V4_515F_New_V4_806R_New-L1_T2_FR_04_TAGAACTCTG
+L1_T2_FRAS_01,4-Aug-20,Lineage 1,Established,T2,Field,Root-associated soils,1,V4_515F_New_V4_806R_New-L1_T2_FRAS_01_TATCATGTGC
+L1_T2_FRAS_02,4-Aug-20,Lineage 1,Established,T2,Field,Root-associated soils,2,V4_515F_New_V4_806R_New-L1_T2_FRAS_02_CATGAGTGTA
+L1_T2_FRAS_03,6-Aug-20,Lineage 1,Established,T2,Field,Root-associated soils,3,V4_515F_New_V4_806R_New-L1_T2_FRAS_03_TGTCGTCATA
+L1_T2_FRAS_04,6-Aug-20,Lineage 1,Established,T2,Field,Root-associated soils,4,V4_515F_New_V4_806R_New-L1_T2_FRAS_04_TATCTCATGC
+L1_T2_FS_01,4-Aug-20,Lineage 1,Established,T2,Field,Bulk soil,1,V4_515F_New_V4_806R_New-L1_T2_FS_01_CACTATGTCG
+L1_T2_FS_02,4-Aug-20,Lineage 1,Established,T2,Field,Bulk soil,2,V4_515F_New_V4_806R_New-L1_T2_FS_02_TAGCGCGTAG
+L1_T2_FS_03,6-Aug-20,Lineage 1,Established,T2,Field,Bulk soil,3,V4_515F_New_V4_806R_New-L1_T2_FS_03_CGTCACAGTA
+L1_T2_FS_04,6-Aug-20,Lineage 1,Established,T2,Field,Bulk soil,4,V4_515F_New_V4_806R_New-L1_T2_FS_04_TCGCGTGAGA
+L1_T2_FST_01,4-Aug-20,Lineage 1,Established,T2,Field,Stalks,1,V4_515F_New_V4_806R_New-L1_T2_FST_01_TAAGCGATCG
+L1_T2_FST_02,4-Aug-20,Lineage 1,Established,T2,Field,Stalks,2,V4_515F_New_V4_806R_New-L1_T2_FST_02_GAGCATCAGG
+L1_T2_FST_03,6-Aug-20,Lineage 1,Established,T2,Field,Stalks,3,V4_515F_New_V4_806R_New-L1_T2_FST_03_TCAGGTCTGT
+L1_T2_FST_04,6-Aug-20,Lineage 1,Established,T2,Field,Stalks,4,V4_515F_New_V4_806R_New-L1_T2_FST_04_GCATGTGAGG
+L1_TR_GHL_01,16-Apr-20,Lineage 1,Transplant to field,T1,Greenhouse,Leaves,1,V4_515F_New_V4_806R_New-L1_TR_GHL_01_GCATTCACGT
+L1_TR_GHL_02,16-Apr-20,Lineage 1,Transplant to field,T1,Greenhouse,Leaves,2,V4_515F_New_V4_806R_New-L1_TR_GHL_02_TCAGAGTCAT
+L1_TR_GHL_03,16-Apr-20,Lineage 1,Transplant to field,T1,Greenhouse,Leaves,3,V4_515F_New_V4_806R_New-L1_TR_GHL_03_TCGTTCAGAC
+L1_TR_GHL_04,16-Apr-20,Lineage 1,Transplant to field,T1,Greenhouse,Leaves,4,V4_515F_New_V4_806R_New-L1_TR_GHL_04_CCATGTGTCG
+L1_TR_GHR_01,16-Apr-20,Lineage 1,Transplant to field,T1,Greenhouse,Roots,1,V4_515F_New_V4_806R_New-L1_TR_GHR_01_CTATCTGAAG
+L1_TR_GHR_02,16-Apr-20,Lineage 1,Transplant to field,T1,Greenhouse,Roots,2,V4_515F_New_V4_806R_New-L1_TR_GHR_02_TCCTATGACA
+L1_TR_GHR_03,16-Apr-20,Lineage 1,Transplant to field,T1,Greenhouse,Roots,3,V4_515F_New_V4_806R_New-L1_TR_GHR_03_TTCATGACGT
+L1_TR_GHR_04,16-Apr-20,Lineage 1,Transplant to field,T1,Greenhouse,Roots,4,V4_515F_New_V4_806R_New-L1_TR_GHR_04_TTAGAGATGG
+L1_TR_GHRAS_01,16-Apr-20,Lineage 1,Transplant to field,T1,Greenhouse,Root-associated soils,1,V4_515F_New_V4_806R_New-L1_TR_GHRAS_01_TGCGTAGTCG
+L1_TR_GHRAS_02,16-Apr-20,Lineage 1,Transplant to field,T1,Greenhouse,Root-associated soils,2,V4_515F_New_V4_806R_New-L1_TR_GHRAS_02_CTGTGTCGTC
+L1_TR_GHRAS_03,16-Apr-20,Lineage 1,Transplant to field,T1,Greenhouse,Root-associated soils,3,V4_515F_New_V4_806R_New-L1_TR_GHRAS_03_CTGTAGTGCG
+L1_TR_GHRAS_04,16-Apr-20,Lineage 1,Transplant to field,T1,Greenhouse,Root-associated soils,4,V4_515F_New_V4_806R_New-L1_TR_GHRAS_04_GTGCGCTAGT
+L1_TR_GHS_01,16-Apr-20,Lineage 1,Transplant to field,T1,Greenhouse,Bulk soil,1,V4_515F_New_V4_806R_New-L1_TR_GHS_01_GTGCGTGTGT
+L1_TR_GHS_02,16-Apr-20,Lineage 1,Transplant to field,T1,Greenhouse,Bulk soil,2,V4_515F_New_V4_806R_New-L1_TR_GHS_02_GCGTCGTGTA
+L1_TR_GHS_03,16-Apr-20,Lineage 1,Transplant to field,T1,Greenhouse,Bulk soil,3,V4_515F_New_V4_806R_New-L1_TR_GHS_03_GTCGTGTACT
+L1_TR_GHS_04,16-Apr-20,Lineage 1,Transplant to field,T1,Greenhouse,Bulk soil,4,V4_515F_New_V4_806R_New-L1_TR_GHS_04_GATGTAGCGT
+L1_TR_GHST_01,16-Apr-20,Lineage 1,Transplant to field,T1,Greenhouse,Stalks,1,V4_515F_New_V4_806R_New-L1_TR_GHST_01_GAGCTCATAA
+L1_TR_GHST_02,16-Apr-20,Lineage 1,Transplant to field,T1,Greenhouse,Stalks,2,V4_515F_New_V4_806R_New-L1_TR_GHST_02_CTGATATCCG
+L1_TR_GHST_03,16-Apr-20,Lineage 1,Transplant to field,T1,Greenhouse,Stalks,3,V4_515F_New_V4_806R_New-L1_TR_GHST_03_TCTCGTACAA
+L1_TR_GHST_04,16-Apr-20,Lineage 1,Transplant to field,T1,Greenhouse,Stalks,4,V4_515F_New_V4_806R_New-L1_TR_GHST_04_CGATACGTGT
+L2_T2_FL_01,4-Aug-20,Lineage 2,Established,T2,Field,Leaves,1,V4_515F_New_V4_806R_New-L2_T2_FL_01_TAGAGCCATA
+L2_T2_FL_02,4-Aug-20,Lineage 2,Established,T2,Field,Leaves,2,V4_515F_New_V4_806R_New-L2_T2_FL_02_GTCATCAGAC
+L2_T2_FL_03,6-Aug-20,Lineage 2,Established,T2,Field,Leaves,3,V4_515F_New_V4_806R_New-L2_T2_FL_03_CGGATAGCTG
+L2_T2_FL_04,6-Aug-20,Lineage 2,Established,T2,Field,Leaves,4,V4_515F_New_V4_806R_New-L2_T2_FL_04_TGAGATGTTC
+L2_T2_FR_01,4-Aug-20,Lineage 2,Established,T2,Field,Roots,1,V4_515F_New_V4_806R_New-L2_T2_FR_01_GCACGTATGA
+L2_T2_FR_02,4-Aug-20,Lineage 2,Established,T2,Field,Roots,2,V4_515F_New_V4_806R_New-L2_T2_FR_02_CGTGACAATG
+L2_T2_FR_03,6-Aug-20,Lineage 2,Established,T2,Field,Roots,3,V4_515F_New_V4_806R_New-L2_T2_FR_03_TGGCTCTAGT
+L2_T2_FR_04,6-Aug-20,Lineage 2,Established,T2,Field,Roots,4,V4_515F_New_V4_806R_New-L2_T2_FR_04_GAGGAGTGAC
+L2_T2_FRAS_01,4-Aug-20,Lineage 2,Established,T2,Field,Root-associated soils,1,V4_515F_New_V4_806R_New-L2_T2_FRAS_01_TGTGTCACTA
+L2_T2_FRAS_02,4-Aug-20,Lineage 2,Established,T2,Field,Root-associated soils,2,V4_515F_New_V4_806R_New-L2_T2_FRAS_02_TATCGATGCT
+L2_T2_FRAS_03,6-Aug-20,Lineage 2,Established,T2,Field,Root-associated soils,3,V4_515F_New_V4_806R_New-L2_T2_FRAS_03_TAGAGTCTGT
+L2_T2_FRAS_04,6-Aug-20,Lineage 2,Established,T2,Field,Root-associated soils,4,V4_515F_New_V4_806R_New-L2_T2_FRAS_04_CATGCATCAT
+L2_T2_FS_01,4-Aug-20,Lineage 2,Established,T2,Field,Bulk soil,1,V4_515F_New_V4_806R_New-L2_T2_FS_01_TACATCGCTG
+L2_T2_FS_02,4-Aug-20,Lineage 2,Established,T2,Field,Bulk soil,2,V4_515F_New_V4_806R_New-L2_T2_FS_02_GTGAGAGACA
+L2_T2_FS_03,6-Aug-20,Lineage 2,Established,T2,Field,Bulk soil,3,V4_515F_New_V4_806R_New-L2_T2_FS_03_GACTGTACGT
+L2_T2_FS_04,6-Aug-20,Lineage 2,Established,T2,Field,Bulk soil,4,V4_515F_New_V4_806R_New-L2_T2_FS_04_GCACGTAGCT
+L2_T2_FST_01,4-Aug-20,Lineage 2,Established,T2,Field,Stalks,1,V4_515F_New_V4_806R_New-L2_T2_FST_01_GAATTGTGAG
+L2_T2_FST_02,4-Aug-20,Lineage 2,Established,T2,Field,Stalks,2,V4_515F_New_V4_806R_New-L2_T2_FST_02_TCGACTACTA
+L2_T2_FST_03,6-Aug-20,Lineage 2,Established,T2,Field,Stalks,3,V4_515F_New_V4_806R_New-L2_T2_FST_03_CAGATAGGCT
+L2_T2_FST_04,6-Aug-20,Lineage 2,Established,T2,Field,Stalks,4,V4_515F_New_V4_806R_New-L2_T2_FST_04_TACGCTTGCG
+L2_TR_GHL_01,16-Apr-20,Lineage 2,Transplant to field,T1,Greenhouse,Leaves,1,V4_515F_New_V4_806R_New-L2_TR_GHL_01_GAGTCCGACT
+L2_TR_GHL_02,16-Apr-20,Lineage 2,Transplant to field,T1,Greenhouse,Leaves,2,V4_515F_New_V4_806R_New-L2_TR_GHL_02_TACGCTCTTA
+L2_TR_GHL_03,16-Apr-20,Lineage 2,Transplant to field,T1,Greenhouse,Leaves,3,V4_515F_New_V4_806R_New-L2_TR_GHL_03_TTGCATGTAG
+L2_TR_GHL_04,16-Apr-20,Lineage 2,Transplant to field,T1,Greenhouse,Leaves,4,V4_515F_New_V4_806R_New-L2_TR_GHL_04_TGAGAGATCT
+L2_TR_GHR_01,16-Apr-20,Lineage 2,Transplant to field,T1,Greenhouse,Roots,1,V4_515F_New_V4_806R_New-L2_TR_GHR_01_TGATGTCAAG
+L2_TR_GHR_02,16-Apr-20,Lineage 2,Transplant to field,T1,Greenhouse,Roots,2,V4_515F_New_V4_806R_New-L2_TR_GHR_02_TAACGCTAGA
+L2_TR_GHR_03,16-Apr-20,Lineage 2,Transplant to field,T1,Greenhouse,Roots,3,V4_515F_New_V4_806R_New-L2_TR_GHR_03_CAACTAGAGA
+L2_TR_GHR_04,16-Apr-20,Lineage 2,Transplant to field,T1,Greenhouse,Roots,4,V4_515F_New_V4_806R_New-L2_TR_GHR_04_GTGTGACTAA
+L2_TR_GHRAS_01,16-Apr-20,Lineage 2,Transplant to field,T1,Greenhouse,Root-associated soils,1,V4_515F_New_V4_806R_New-L2_TR_GHRAS_01_TGTGCTCGCA
+L2_TR_GHRAS_02,16-Apr-20,Lineage 2,Transplant to field,T1,Greenhouse,Root-associated soils,2,V4_515F_New_V4_806R_New-L2_TR_GHRAS_02_GATGCGAGCT
+L2_TR_GHRAS_03,16-Apr-20,Lineage 2,Transplant to field,T1,Greenhouse,Root-associated soils,3,V4_515F_New_V4_806R_New-L2_TR_GHRAS_03_CTGTACGTGA
+L2_TR_GHRAS_04,16-Apr-20,Lineage 2,Transplant to field,T1,Greenhouse,Root-associated soils,4,V4_515F_New_V4_806R_New-L2_TR_GHRAS_04_GCGATGATGA
+L2_TR_GHS_01,16-Apr-20,Lineage 2,Transplant to field,T1,Greenhouse,Bulk soil,1,V4_515F_New_V4_806R_New-L2_TR_GHS_01_GAGTGATCGT
+L2_TR_GHS_02,16-Apr-20,Lineage 2,Transplant to field,T1,Greenhouse,Bulk soil,2,V4_515F_New_V4_806R_New-L2_TR_GHS_02_CGCTATCAGT
+L2_TR_GHS_03,16-Apr-20,Lineage 2,Transplant to field,T1,Greenhouse,Bulk soil,3,V4_515F_New_V4_806R_New-L2_TR_GHS_03_CGCTGTAGTC
+L2_TR_GHS_04,16-Apr-20,Lineage 2,Transplant to field,T1,Greenhouse,Bulk soil,4,V4_515F_New_V4_806R_New-L2_TR_GHS_04_GCTAGTGAGT
+L2_TR_GHST_01,16-Apr-20,Lineage 2,Transplant to field,T1,Greenhouse,Stalks,1,V4_515F_New_V4_806R_New-L2_TR_GHST_01_GCTTATCGAT
+L2_TR_GHST_02,16-Apr-20,Lineage 2,Transplant to field,T1,Greenhouse,Stalks,2,V4_515F_New_V4_806R_New-L2_TR_GHST_02_GACAGTTCTT
+L2_TR_GHST_03,16-Apr-20,Lineage 2,Transplant to field,T1,Greenhouse,Stalks,3,V4_515F_New_V4_806R_New-L2_TR_GHST_03_CGATTAGCGA
+L2_TR_GHST_04,16-Apr-20,Lineage 2,Transplant to field,T1,Greenhouse,Stalks,4,V4_515F_New_V4_806R_New-L2_TR_GHST_04_TTCAGTCGCG
+L3_T2_FL_01,4-Aug-20,Lineage 3,Established,T2,Field,Leaves,1,V4_515F_New_V4_806R_New-L3_T2_FL_01_GCTAGAGCTA
+L3_T2_FL_02,4-Aug-20,Lineage 3,Established,T2,Field,Leaves,2,V4_515F_New_V4_806R_New-L3_T2_FL_02_TCACGTTGCG
+L3_T2_FL_03,6-Aug-20,Lineage 3,Established,T2,Field,Leaves,3,V4_515F_New_V4_806R_New-L3_T2_FL_03_CTGCACAATG
+L3_T2_FL_04,6-Aug-20,Lineage 3,Established,T2,Field,Leaves,4,V4_515F_New_V4_806R_New-L3_T2_FL_04_GTACACTTGA
+L3_T2_FR_01,4-Aug-20,Lineage 3,Established,T2,Field,Roots,1,V4_515F_New_V4_806R_New-L3_T2_FR_01_CACGTCGTAG
+L3_T2_FR_02,4-Aug-20,Lineage 3,Established,T2,Field,Roots,2,V4_515F_New_V4_806R_New-L3_T2_FR_02_GAGTAGCCTG
+L3_T2_FR_03,6-Aug-20,Lineage 3,Established,T2,Field,Roots,3,V4_515F_New_V4_806R_New-L3_T2_FR_03_TGTATCTGAC
+L3_T2_FR_04,6-Aug-20,Lineage 3,Established,T2,Field,Roots,4,V4_515F_New_V4_806R_New-L3_T2_FR_04_CTTAGAGTCG
+L3_T2_FRAS_01,4-Aug-20,Lineage 3,Established,T2,Field,Root-associated soils,1,V4_515F_New_V4_806R_New-L3_T2_FRAS_01_TGATCAGTCA
+L3_T2_FRAS_02,4-Aug-20,Lineage 3,Established,T2,Field,Root-associated soils,2,V4_515F_New_V4_806R_New-L3_T2_FRAS_02_CGTCTATGAT
+L3_T2_FRAS_03,6-Aug-20,Lineage 3,Established,T2,Field,Root-associated soils,3,V4_515F_New_V4_806R_New-L3_T2_FRAS_03_GTGATACTGA
+L3_T2_FRAS_04,6-Aug-20,Lineage 3,Established,T2,Field,Root-associated soils,4,V4_515F_New_V4_806R_New-L3_T2_FRAS_04_CTAGATCTGA
+L3_T2_FS_01,4-Aug-20,Lineage 3,Established,T2,Field,Bulk soil,1,V4_515F_New_V4_806R_New-L3_T2_FS_01_TCACGCTATG
+L3_T2_FS_02,4-Aug-20,Lineage 3,Established,T2,Field,Bulk soil,2,V4_515F_New_V4_806R_New-L3_T2_FS_02_CGTACTACGT
+L3_T2_FS_03,6-Aug-20,Lineage 3,Established,T2,Field,Bulk soil,3,V4_515F_New_V4_806R_New-L3_T2_FS_03_CAGCTGAGTA
+L3_T2_FS_04,6-Aug-20,Lineage 3,Established,T2,Field,Bulk soil,4,V4_515F_New_V4_806R_New-L3_T2_FS_04_GAGATCAGTC
+L3_T2_FST_01,4-Aug-20,Lineage 3,Established,T2,Field,Stalks,1,V4_515F_New_V4_806R_New-L3_T2_FST_01_TAACATCGTG
+L3_T2_FST_02,4-Aug-20,Lineage 3,Established,T2,Field,Stalks,2,V4_515F_New_V4_806R_New-L3_T2_FST_02_GACTGGAGCA
+L3_T2_FST_03,6-Aug-20,Lineage 3,Established,T2,Field,Stalks,3,V4_515F_New_V4_806R_New-L3_T2_FST_03_TCGTAGACCT
+L3_T2_FST_04,6-Aug-20,Lineage 3,Established,T2,Field,Stalks,4,V4_515F_New_V4_806R_New-L3_T2_FST_04_CGTGCAAGAT
+L3_TR_GHL_01,16-Apr-20,Lineage 3,Transplant to field,T1,Greenhouse,Leaves,1,V4_515F_New_V4_806R_New-L3_TR_GHL_01_CGACGTTATC
+L3_TR_GHL_02,16-Apr-20,Lineage 3,Transplant to field,T1,Greenhouse,Leaves,2,V4_515F_New_V4_806R_New-L3_TR_GHL_02_TGAGTCTCGC
+L3_TR_GHL_03,16-Apr-20,Lineage 3,Transplant to field,T1,Greenhouse,Leaves,3,V4_515F_New_V4_806R_New-L3_TR_GHL_03_TGAGATTCAG
+L3_TR_GHL_04,16-Apr-20,Lineage 3,Transplant to field,T1,Greenhouse,Leaves,4,V4_515F_New_V4_806R_New-L3_TR_GHL_04_GTACGATAGA
+L3_TR_GHR_01,16-Apr-20,Lineage 3,Transplant to field,T1,Greenhouse,Roots,1,V4_515F_New_V4_806R_New-L3_TR_GHR_01_GTCTATGAAG
+L3_TR_GHR_02,16-Apr-20,Lineage 3,Transplant to field,T1,Greenhouse,Roots,2,V4_515F_New_V4_806R_New-L3_TR_GHR_02_GCTCAATAAC
+L3_TR_GHR_03,16-Apr-20,Lineage 3,Transplant to field,T1,Greenhouse,Roots,3,V4_515F_New_V4_806R_New-L3_TR_GHR_03_TTCACAGCTT
+L3_TR_GHR_04,16-Apr-20,Lineage 3,Transplant to field,T1,Greenhouse,Roots,4,V4_515F_New_V4_806R_New-L3_TR_GHR_04_GCAGTTGATT
+L3_TR_GHRAS_01,16-Apr-20,Lineage 3,Transplant to field,T1,Greenhouse,Root-associated soils,1,V4_515F_New_V4_806R_New-L3_TR_GHRAS_01_TGTCGAGTCA
+L3_TR_GHRAS_02,16-Apr-20,Lineage 3,Transplant to field,T1,Greenhouse,Root-associated soils,2,V4_515F_New_V4_806R_New-L3_TR_GHRAS_02_GTCTACTGTC
+L3_TR_GHRAS_03,16-Apr-20,Lineage 3,Transplant to field,T1,Greenhouse,Root-associated soils,3,V4_515F_New_V4_806R_New-L3_TR_GHRAS_03_CAGTCAGAGT
+L3_TR_GHRAS_04,16-Apr-20,Lineage 3,Transplant to field,T1,Greenhouse,Root-associated soils,4,V4_515F_New_V4_806R_New-L3_TR_GHRAS_04_CGCAGTCTAT
+L3_TR_GHS_01,16-Apr-20,Lineage 3,Transplant to field,T1,Greenhouse,Bulk soil,1,V4_515F_New_V4_806R_New-L3_TR_GHS_01_GAGCTAGTGA
+L3_TR_GHS_02,16-Apr-20,Lineage 3,Transplant to field,T1,Greenhouse,Bulk soil,2,V4_515F_New_V4_806R_New-L3_TR_GHS_02_CGTGCTGTCA
+L3_TR_GHS_03,16-Apr-20,Lineage 3,Transplant to field,T1,Greenhouse,Bulk soil,3,V4_515F_New_V4_806R_New-L3_TR_GHS_03_GATCGTCTCT
+L3_TR_GHS_04,16-Apr-20,Lineage 3,Transplant to field,T1,Greenhouse,Bulk soil,4,V4_515F_New_V4_806R_New-L3_TR_GHS_04_GTGCTGTCGT
+L3_TR_GHST_01,16-Apr-20,Lineage 3,Transplant to field,T1,Greenhouse,Stalks,1,V4_515F_New_V4_806R_New-L3_TR_GHST_01_GATATAGGCA
+L3_TR_GHST_02,16-Apr-20,Lineage 3,Transplant to field,T1,Greenhouse,Stalks,2,V4_515F_New_V4_806R_New-L3_TR_GHST_02_TATAGAGCCG
+L3_TR_GHST_03,16-Apr-20,Lineage 3,Transplant to field,T1,Greenhouse,Stalks,3,V4_515F_New_V4_806R_New-L3_TR_GHST_03_CATGCGGAGA
+L3_TR_GHST_04,16-Apr-20,Lineage 3,Transplant to field,T1,Greenhouse,Stalks,4,V4_515F_New_V4_806R_New-L3_TR_GHST_04_GCCTGCTAGA
+L4_T2_FL_01,4-Aug-20,Lineage 4,Established,T2,Field,Leaves,1,V4_515F_New_V4_806R_New-L4_T2_FL_01_TCTCATGTTG
+L4_T2_FL_02,4-Aug-20,Lineage 4,Established,T2,Field,Leaves,2,V4_515F_New_V4_806R_New-L4_T2_FL_02_GCTCTCTAGG
+L4_T2_FL_03,6-Aug-20,Lineage 4,Established,T2,Field,Leaves,3,V4_515F_New_V4_806R_New-L4_T2_FL_03_TGACTCAATG
+L4_T2_FL_04,6-Aug-20,Lineage 4,Established,T2,Field,Leaves,4,V4_515F_New_V4_806R_New-L4_T2_FL_04_GAGTATCGCC
+L4_T2_FR_01,4-Aug-20,Lineage 4,Established,T2,Field,Roots,1,V4_515F_New_V4_806R_New-L4_T2_FR_01_GACTTATCGC
+L4_T2_FR_02,4-Aug-20,Lineage 4,Established,T2,Field,Roots,2,V4_515F_New_V4_806R_New-L4_T2_FR_02_CAAGCTGTGC
+L4_T2_FR_03,6-Aug-20,Lineage 4,Established,T2,Field,Roots,3,V4_515F_New_V4_806R_New-L4_T2_FR_03_TAGGTCTATG
+L4_T2_FR_04,6-Aug-20,Lineage 4,Established,T2,Field,Roots,4,V4_515F_New_V4_806R_New-L4_T2_FR_04_CATGTTGCAT
+L4_T2_FRAS_01,4-Aug-20,Lineage 4,Established,T2,Field,Root-associated soils,1,V4_515F_New_V4_806R_New-L4_T2_FRAS_01_TATCAGTCTG
+L4_T2_FRAS_02,4-Aug-20,Lineage 4,Established,T2,Field,Root-associated soils,2,V4_515F_New_V4_806R_New-L4_T2_FRAS_02_TCAGATGCTA
+L4_T2_FRAS_03,6-Aug-20,Lineage 4,Established,T2,Field,Root-associated soils,3,V4_515F_New_V4_806R_New-L4_T2_FRAS_03_TATGTACGTG
+L4_T2_FRAS_04,6-Aug-20,Lineage 4,Established,T2,Field,Root-associated soils,4,V4_515F_New_V4_806R_New-L4_T2_FRAS_04_CTATACAGTG
+L4_T2_FS_01,4-Aug-20,Lineage 4,Established,T2,Field,Bulk soil,1,V4_515F_New_V4_806R_New-L4_T2_FS_01_TACTGAGCTG
+L4_T2_FS_02,4-Aug-20,Lineage 4,Established,T2,Field,Bulk soil,2,V4_515F_New_V4_806R_New-L4_T2_FS_02_TAGTAGCGCG
+L4_T2_FS_03,6-Aug-20,Lineage 4,Established,T2,Field,Bulk soil,3,V4_515F_New_V4_806R_New-L4_T2_FS_03_GACGTCTGCT
+L4_T2_FS_04,6-Aug-20,Lineage 4,Established,T2,Field,Bulk soil,4,V4_515F_New_V4_806R_New-L4_T2_FS_04_GTACTCGCGA
+L4_T2_FST_01,4-Aug-20,Lineage 4,Established,T2,Field,Stalks,1,V4_515F_New_V4_806R_New-L4_T2_FST_01_TAGAGCGGTC
+L4_T2_FST_02,4-Aug-20,Lineage 4,Established,T2,Field,Stalks,2,V4_515F_New_V4_806R_New-L4_T2_FST_02_TGCGTACACT
+L4_T2_FST_03,6-Aug-20,Lineage 4,Established,T2,Field,Stalks,3,V4_515F_New_V4_806R_New-L4_T2_FST_03_GTCGCGATTC
+L4_T2_FST_04,6-Aug-20,Lineage 4,Established,T2,Field,Stalks,4,V4_515F_New_V4_806R_New-L4_T2_FST_04_GTACGATCTC
+L4_TR_GHL_01,16-Apr-20,Lineage 4,Transplant to field,T1,Greenhouse,Leaves,1,V4_515F_New_V4_806R_New-L4_TR_GHL_01_GAGTTACTCT
+L4_TR_GHL_02,16-Apr-20,Lineage 4,Transplant to field,T1,Greenhouse,Leaves,2,V4_515F_New_V4_806R_New-L4_TR_GHL_02_TCGTTAGCGC
+L4_TR_GHL_03,16-Apr-20,Lineage 4,Transplant to field,T1,Greenhouse,Leaves,3,V4_515F_New_V4_806R_New-L4_TR_GHL_03_TTGTCTACGA
+L4_TR_GHL_04,16-Apr-20,Lineage 4,Transplant to field,T1,Greenhouse,Leaves,4,V4_515F_New_V4_806R_New-L4_TR_GHL_04_TAAGTGACAC
+L4_TR_GHR_01,16-Apr-20,Lineage 4,Transplant to field,T1,Greenhouse,Roots,1,V4_515F_New_V4_806R_New-L4_TR_GHR_01_CTATCGTGAT
+L4_TR_GHR_02,16-Apr-20,Lineage 4,Transplant to field,T1,Greenhouse,Roots,2,V4_515F_New_V4_806R_New-L4_TR_GHR_02_TAGTACGAAC
+L4_TR_GHR_03,16-Apr-20,Lineage 4,Transplant to field,T1,Greenhouse,Roots,3,V4_515F_New_V4_806R_New-L4_TR_GHR_03_TAGCATGGAT
+L4_TR_GHR_04,16-Apr-20,Lineage 4,Transplant to field,T1,Greenhouse,Roots,4,V4_515F_New_V4_806R_New-L4_TR_GHR_04_TAACTCGATC
+L4_TR_GHRAS_01,16-Apr-20,Lineage 4,Transplant to field,T1,Greenhouse,Root-associated soils,1,V4_515F_New_V4_806R_New-L4_TR_GHRAS_01_GTATGAGCAC
+L4_TR_GHRAS_02,16-Apr-20,Lineage 4,Transplant to field,T1,Greenhouse,Root-associated soils,2,V4_515F_New_V4_806R_New-L4_TR_GHRAS_02_CGAGTGCTGT
+L4_TR_GHRAS_03,16-Apr-20,Lineage 4,Transplant to field,T1,Greenhouse,Root-associated soils,3,V4_515F_New_V4_806R_New-L4_TR_GHRAS_03_TATAGCACGC
+L4_TR_GHRAS_04,16-Apr-20,Lineage 4,Transplant to field,T1,Greenhouse,Root-associated soils,4,V4_515F_New_V4_806R_New-L4_TR_GHRAS_04_TCATGCGCGA
+L4_TR_GHS_01,16-Apr-20,Lineage 4,Transplant to field,T1,Greenhouse,Bulk soil,1,V4_515F_New_V4_806R_New-L4_TR_GHS_01_TGAGCGTGCT
+L4_TR_GHS_02,16-Apr-20,Lineage 4,Transplant to field,T1,Greenhouse,Bulk soil,2,V4_515F_New_V4_806R_New-L4_TR_GHS_02_CATGTCGTCA
+L4_TR_GHS_03,16-Apr-20,Lineage 4,Transplant to field,T1,Greenhouse,Bulk soil,3,V4_515F_New_V4_806R_New-L4_TR_GHS_03_TCAGTGTCTC
+L4_TR_GHS_04,16-Apr-20,Lineage 4,Transplant to field,T1,Greenhouse,Bulk soil,4,V4_515F_New_V4_806R_New-L4_TR_GHS_04_GTGCTCATGT
+L4_TR_GHST_01,16-Apr-20,Lineage 4,Transplant to field,T1,Greenhouse,Stalks,1,V4_515F_New_V4_806R_New-L4_TR_GHST_01_CCTGATGTGC
+L4_TR_GHST_02,16-Apr-20,Lineage 4,Transplant to field,T1,Greenhouse,Stalks,2,V4_515F_New_V4_806R_New-L4_TR_GHST_02_CAACAGATCT
+L4_TR_GHST_03,16-Apr-20,Lineage 4,Transplant to field,T1,Greenhouse,Stalks,3,V4_515F_New_V4_806R_New-L4_TR_GHST_03_TCCTGTCGTG
+L4_TR_GHST_04,16-Apr-20,Lineage 4,Transplant to field,T1,Greenhouse,Stalks,4,V4_515F_New_V4_806R_New-L4_TR_GHST_04_CGTAACAAGA
+L5_T2_FL_01,4-Aug-20,Lineage 5,Established,T2,Field,Leaves,1,V4_515F_New_V4_806R_New-L5_T2_FL_01_TCCTGATCAT
+L5_T2_FL_02,4-Aug-20,Lineage 5,Established,T2,Field,Leaves,2,V4_515F_New_V4_806R_New-L5_T2_FL_02_CGATATCTGG
+L5_T2_FL_03,6-Aug-20,Lineage 5,Established,T2,Field,Leaves,3,V4_515F_New_V4_806R_New-L5_T2_FL_03_GCACTGTCTT
+L5_T2_FL_04,6-Aug-20,Lineage 5,Established,T2,Field,Leaves,4,V4_515F_New_V4_806R_New-L5_T2_FL_04_GGTATGGACG
+L5_T2_FR_01,4-Aug-20,Lineage 5,Established,T2,Field,Roots,1,V4_515F_New_V4_806R_New-L5_T2_FR_01_GATCAGACCT
+L5_T2_FR_02,4-Aug-20,Lineage 5,Established,T2,Field,Roots,2,V4_515F_New_V4_806R_New-L5_T2_FR_02_CTGATGACTT
+L5_T2_FR_03,6-Aug-20,Lineage 5,Established,T2,Field,Roots,3,V4_515F_New_V4_806R_New-L5_T2_FR_03_TGAACTACGA
+L5_T2_FR_04,6-Aug-20,Lineage 5,Established,T2,Field,Roots,4,V4_515F_New_V4_806R_New-L5_T2_FR_04_TCACAGGTGA
+L5_T2_FRAS_01,4-Aug-20,Lineage 5,Established,T2,Field,Root-associated soils,1,V4_515F_New_V4_806R_New-L5_T2_FRAS_01_TGATACTCTG
+L5_T2_FRAS_02,4-Aug-20,Lineage 5,Established,T2,Field,Root-associated soils,2,V4_515F_New_V4_806R_New-L5_T2_FRAS_02_TCAGCGATAT
+L5_T2_FRAS_03,6-Aug-20,Lineage 5,Established,T2,Field,Root-associated soils,3,V4_515F_New_V4_806R_New-L5_T2_FRAS_03_CTACTGATGA
+L5_T2_FRAS_04,6-Aug-20,Lineage 5,Established,T2,Field,Root-associated soils,4,V4_515F_New_V4_806R_New-L5_T2_FRAS_04_GTAGTACACA
+L5_T2_FS_01,4-Aug-20,Lineage 5,Established,T2,Field,Bulk soil,1,V4_515F_New_V4_806R_New-L5_T2_FS_01_TCTGAGCGCA
+L5_T2_FS_02,4-Aug-20,Lineage 5,Established,T2,Field,Bulk soil,2,V4_515F_New_V4_806R_New-L5_T2_FS_02_TAGACGTGCT
+L5_T2_FS_03,6-Aug-20,Lineage 5,Established,T2,Field,Bulk soil,3,V4_515F_New_V4_806R_New-L5_T2_FS_03_GTGACTCGTC
+L5_T2_FS_04,6-Aug-20,Lineage 5,Established,T2,Field,Bulk soil,4,V4_515F_New_V4_806R_New-L5_T2_FS_04_TCGAGTAGCG
+L5_T2_FST_01,4-Aug-20,Lineage 5,Established,T2,Field,Stalks,1,V4_515F_New_V4_806R_New-L5_T2_FST_01_TCGATTACGC
+L5_T2_FST_02,4-Aug-20,Lineage 5,Established,T2,Field,Stalks,2,V4_515F_New_V4_806R_New-L5_T2_FST_02_TGACTCATCA
+L5_T2_FST_03,6-Aug-20,Lineage 5,Established,T2,Field,Stalks,3,V4_515F_New_V4_806R_New-L5_T2_FST_03_TCGGTATGGA
+L5_T2_FST_04,6-Aug-20,Lineage 5,Established,T2,Field,Stalks,4,V4_515F_New_V4_806R_New-L5_T2_FST_04_GATATCTCCG
+L5_TR_GHL_01,16-Apr-20,Lineage 5,Transplant to field,T1,Greenhouse,Leaves,1,V4_515F_New_V4_806R_New-L5_TR_GHL_01_CGAGCTTAGA
+L5_TR_GHL_02,16-Apr-20,Lineage 5,Transplant to field,T1,Greenhouse,Leaves,2,V4_515F_New_V4_806R_New-L5_TR_GHL_02_GAGCTCGTTC
+L5_TR_GHL_03,16-Apr-20,Lineage 5,Transplant to field,T1,Greenhouse,Leaves,3,V4_515F_New_V4_806R_New-L5_TR_GHL_03_CACTCGATAA
+L5_TR_GHL_04,16-Apr-20,Lineage 5,Transplant to field,T1,Greenhouse,Leaves,4,V4_515F_New_V4_806R_New-L5_TR_GHL_04
+L5_TR_GHR_01,16-Apr-20,Lineage 5,Transplant to field,T1,Greenhouse,Roots,1,V4_515F_New_V4_806R_New-L5_TR_GHR_01_GTCTTAGACT
+L5_TR_GHR_02,16-Apr-20,Lineage 5,Transplant to field,T1,Greenhouse,Roots,2,V4_515F_New_V4_806R_New-L5_TR_GHR_02_TCACTAAGCT
+L5_TR_GHR_03,16-Apr-20,Lineage 5,Transplant to field,T1,Greenhouse,Roots,3,V4_515F_New_V4_806R_New-L5_TR_GHR_03_TCAGACTAGA
+L5_TR_GHR_04,16-Apr-20,Lineage 5,Transplant to field,T1,Greenhouse,Roots,4,V4_515F_New_V4_806R_New-L5_TR_GHR_04_GACGTATGTA
+L5_TR_GHRAS_01,16-Apr-20,Lineage 5,Transplant to field,T1,Greenhouse,Root-associated soils,1,V4_515F_New_V4_806R_New-L5_TR_GHRAS_01_TATGCGCTGC
+L5_TR_GHRAS_02,16-Apr-20,Lineage 5,Transplant to field,T1,Greenhouse,Root-associated soils,2,V4_515F_New_V4_806R_New-L5_TR_GHRAS_02_TCTCTGTGCA
+L5_TR_GHRAS_03,16-Apr-20,Lineage 5,Transplant to field,T1,Greenhouse,Root-associated soils,3,V4_515F_New_V4_806R_New-L5_TR_GHRAS_03_CTATCGCGTG
+L5_TR_GHRAS_04,16-Apr-20,Lineage 5,Transplant to field,T1,Greenhouse,Root-associated soils,4,V4_515F_New_V4_806R_New-L5_TR_GHRAS_04_TACGCTGCTG
+L5_TR_GHS_01,16-Apr-20,Lineage 5,Transplant to field,T1,Greenhouse,Bulk soil,1,V4_515F_New_V4_806R_New-L5_TR_GHS_01_CGTATCTCGA
+L5_TR_GHS_02,16-Apr-20,Lineage 5,Transplant to field,T1,Greenhouse,Bulk soil,2,V4_515F_New_V4_806R_New-L5_TR_GHS_02_GTCATGCGTC
+L5_TR_GHS_03,16-Apr-20,Lineage 5,Transplant to field,T1,Greenhouse,Bulk soil,3,V4_515F_New_V4_806R_New-L5_TR_GHS_03_CTATGCGATC
+L5_TR_GHS_04,16-Apr-20,Lineage 5,Transplant to field,T1,Greenhouse,Bulk soil,4,V4_515F_New_V4_806R_New-L5_TR_GHS_04_TGCTATGCTG
+L5_TR_GHST_01,16-Apr-20,Lineage 5,Transplant to field,T1,Greenhouse,Stalks,1,V4_515F_New_V4_806R_New-L5_TR_GHST_01_TGTACCTCAG
+L5_TR_GHST_02,16-Apr-20,Lineage 5,Transplant to field,T1,Greenhouse,Stalks,2,V4_515F_New_V4_806R_New-L5_TR_GHST_02_GCATCTGGCT
+L5_TR_GHST_03,16-Apr-20,Lineage 5,Transplant to field,T1,Greenhouse,Stalks,3,V4_515F_New_V4_806R_New-L5_TR_GHST_03_CAACTCAGAT
+L5_TR_GHST_04,16-Apr-20,Lineage 5,Transplant to field,T1,Greenhouse,Stalks,4,V4_515F_New_V4_806R_New-L5_TR_GHST_04
+WT_T2_FL_01,4-Aug-20,Wild type,Established,T2,Field,Leaves,1,V4_515F_New_V4_806R_New-WT_T2_FL_01_TCGAGTCGGA
+WT_T2_FL_02,4-Aug-20,Wild type,Established,T2,Field,Leaves,2,V4_515F_New_V4_806R_New-WT_T2_FL_02_TTACGTCGTA
+WT_T2_FL_03,6-Aug-20,Wild type,Established,T2,Field,Leaves,3,V4_515F_New_V4_806R_New-WT_T2_FL_03_GTATTCAGCA
+WT_T2_FL_04,6-Aug-20,Wild type,Established,T2,Field,Leaves,4,V4_515F_New_V4_806R_New-WT_T2_FL_04_CAGTGGACGT
+WT_T2_FR_01,4-Aug-20,Wild type,Established,T2,Field,Roots,1,V4_515F_New_V4_806R_New-WT_T2_FR_01_TCAGACGCGT
+WT_T2_FR_02,4-Aug-20,Wild type,Established,T2,Field,Roots,2,V4_515F_New_V4_806R_New-WT_T2_FR_02_CGGTTCGTCT
+WT_T2_FR_03,6-Aug-20,Wild type,Established,T2,Field,Roots,3,V4_515F_New_V4_806R_New-WT_T2_FR_03_TCGCTATCGG
+WT_T2_FR_04,6-Aug-20,Wild type,Established,T2,Field,Roots,4,V4_515F_New_V4_806R_New-WT_T2_FR_04_TGTCGAACAG
+WT_T2_FRAS_01,4-Aug-20,Wild type,Established,T2,Field,Root-associated soils,1,V4_515F_New_V4_806R_New-WT_T2_FRAS_01_CGTATGATGT
+WT_T2_FRAS_02,4-Aug-20,Wild type,Established,T2,Field,Root-associated soils,2,V4_515F_New_V4_806R_New-WT_T2_FRAS_02_TAGTCTGTCA
+WT_T2_FRAS_03,6-Aug-20,Wild type,Established,T2,Field,Root-associated soils,3,V4_515F_New_V4_806R_New-WT_T2_FRAS_03_TGTCTCTATC
+WT_T2_FRAS_04,6-Aug-20,Wild type,Established,T2,Field,Root-associated soils,4,V4_515F_New_V4_806R_New-WT_T2_FRAS_04_CTAGAGTATC
+WT_T2_FS_01,4-Aug-20,Wild type,Established,T2,Field,Bulk soil,1,V4_515F_New_V4_806R_New-WT_T2_FS_01_CTGCATGATC
+WT_T2_FS_02,4-Aug-20,Wild type,Established,T2,Field,Bulk soil,2,V4_515F_New_V4_806R_New-WT_T2_FS_02_CGCGTATCAT
+WT_T2_FS_03,6-Aug-20,Wild type,Established,T2,Field,Bulk soil,3,V4_515F_New_V4_806R_New-WT_T2_FS_03_GTATCTCTCG
+WT_T2_FS_04,6-Aug-20,Wild type,Established,T2,Field,Bulk soil,4,V4_515F_New_V4_806R_New-WT_T2_FS_04_GCTCATATGC
+WT_T2_FST_01,4-Aug-20,Wild type,Established,T2,Field,Stalks,1,V4_515F_New_V4_806R_New-WT_T2_FST_01_GATGCAGCCA
+WT_T2_FST_02,4-Aug-20,Wild type,Established,T2,Field,Stalks,2,V4_515F_New_V4_806R_New-WT_T2_FST_02_CGAGGTATAC
+WT_T2_FST_03,6-Aug-20,Wild type,Established,T2,Field,Stalks,3,V4_515F_New_V4_806R_New-WT_T2_FST_03_GTCAGCGATG
+WT_T2_FST_04,6-Aug-20,Wild type,Established,T2,Field,Stalks,4,V4_515F_New_V4_806R_New-WT_T2_FST_04_GTTCCGTTCG
+WT_TR_GHL_01,16-Apr-20,Wild type,Transplant to field,T1,Greenhouse,Leaves,1,V4_515F_New_V4_806R_New-WT_TR_GHL_01_TAGCCTATAC
+WT_TR_GHL_02,16-Apr-20,Wild type,Transplant to field,T1,Greenhouse,Leaves,2,V4_515F_New_V4_806R_New-WT_TR_GHL_02_GAGATTACGT
+WT_TR_GHL_03,16-Apr-20,Wild type,Transplant to field,T1,Greenhouse,Leaves,3,V4_515F_New_V4_806R_New-WT_TR_GHL_03_CGTCTGACTT
+WT_TR_GHL_04,16-Apr-20,Wild type,Transplant to field,T1,Greenhouse,Leaves,4,V4_515F_New_V4_806R_New-WT_TR_GHL_04_CAGTAAGCGA
+WT_TR_GHR_01,16-Apr-20,Wild type,Transplant to field,T1,Greenhouse,Roots,1,V4_515F_New_V4_806R_New-WT_TR_GHR_01_CACAATGTGA
+WT_TR_GHR_02,16-Apr-20,Wild type,Transplant to field,T1,Greenhouse,Roots,2,V4_515F_New_V4_806R_New-WT_TR_GHR_02_GTCGTACTTA
+WT_TR_GHR_03,16-Apr-20,Wild type,Transplant to field,T1,Greenhouse,Roots,3,V4_515F_New_V4_806R_New-WT_TR_GHR_03_TCTTGCATCA
+WT_TR_GHR_04,16-Apr-20,Wild type,Transplant to field,T1,Greenhouse,Roots,4,V4_515F_New_V4_806R_New-WT_TR_GHR_04_GATACCGATA
+WT_TR_GHRAS_01,16-Apr-20,Wild type,Transplant to field,T1,Greenhouse,Root-associated soils,1,V4_515F_New_V4_806R_New-WT_TR_GHRAS_01_TGTGTGCATG
+WT_TR_GHRAS_02,16-Apr-20,Wild type,Transplant to field,T1,Greenhouse,Root-associated soils,2,V4_515F_New_V4_806R_New-WT_TR_GHRAS_02_GAGTGTCACT
+WT_TR_GHRAS_03,16-Apr-20,Wild type,Transplant to field,T1,Greenhouse,Root-associated soils,3,V4_515F_New_V4_806R_New-WT_TR_GHRAS_03_CTAGTCTCGT
+WT_TR_GHRAS_04,16-Apr-20,Wild type,Transplant to field,T1,Greenhouse,Root-associated soils,4,V4_515F_New_V4_806R_New-WT_TR_GHRAS_04_GAGTGCATCT
+WT_TR_GHS_01,16-Apr-20,Wild type,Transplant to field,T1,Greenhouse,Bulk soil,1,V4_515F_New_V4_806R_New-WT_TR_GHS_01_GTATCGTCGT
+WT_TR_GHS_02,16-Apr-20,Wild type,Transplant to field,T1,Greenhouse,Bulk soil,2,V4_515F_New_V4_806R_New-WT_TR_GHS_02_GTGTATGCGT
+WT_TR_GHS_03,16-Apr-20,Wild type,Transplant to field,T1,Greenhouse,Bulk soil,3,V4_515F_New_V4_806R_New-WT_TR_GHS_03_TGCTCGTAGT
+WT_TR_GHS_04,16-Apr-20,Wild type,Transplant to field,T1,Greenhouse,Bulk soil,4,V4_515F_New_V4_806R_New-WT_TR_GHS_04_GTCGTCGTCT
+WT_TR_GHST_01,16-Apr-20,Wild type,Transplant to field,T1,Greenhouse,Stalks,1,V4_515F_New_V4_806R_New-WT_TR_GHST_01_TTGCATGACA
+WT_TR_GHST_02,16-Apr-20,Wild type,Transplant to field,T1,Greenhouse,Stalks,2,V4_515F_New_V4_806R_New-WT_TR_GHST_02_TCGAATCTCA
+WT_TR_GHST_03,16-Apr-20,Wild type,Transplant to field,T1,Greenhouse,Stalks,3,V4_515F_New_V4_806R_New-WT_TR_GHST_03_TAGGACACTA
+WT_TR_GHST_04,16-Apr-20,Wild type,Transplant to field,T1,Greenhouse,Stalks,4,V4_515F_New_V4_806R_New-WT_TR_GHST_04_GCATTCTGCT

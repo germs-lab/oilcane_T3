@@ -1,2 +1,5 @@
 .Rhistory
 .Rproj.user
+
+# Big files
+/data/output/merged_abund.RData

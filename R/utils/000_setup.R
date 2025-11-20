@@ -41,9 +41,9 @@ list.files(here::here("R/functions"), pattern = "\\.R$", full.names = TRUE) %>%
 
 
 # Load processed data objects if they exist
-if (dir.exists(here::here("data/output/processed/rdata"))) {
+if (dir.exists(here::here("data/output/rdata"))) {
   list.files(
-    here::here("data/output/processed/rdata"),
+    here::here("data/output/rdata/phyloseq"),
     full.names = TRUE,
     recursive = FALSE,
     pattern = "\\.rda$"

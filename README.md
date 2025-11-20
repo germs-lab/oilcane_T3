@@ -44,7 +44,7 @@ Imports and processes raw data:
 - Loads metadata, ASV tables, and taxonomy from three timepoints
 - Creates individual phyloseq objects for each timepoint
 - Merges all timepoints into a single phyloseq object
-- Saves processed objects to `data/output/processed/rdata/`
+- Saves processed objects to `data/output/rdata/`
 
 **Output files:**
 - `oilcane_t3_physeq.rda` - Timepoint 3 only
@@ -61,7 +61,7 @@ Performs initial data exploration:
 - Rarefaction curves using parallel iNEXT
 - Taxonomic composition overview
 
-**Output:** `data/output/processed/rdata/eda_results.rda`
+**Output:** `data/output/rdata/eda_results.rda`
 
 ### 4. Alpha and Beta Diversity (`R/05_alpha_beta_div.R`)
 
@@ -71,7 +71,7 @@ Calculates and visualizes diversity metrics:
 - Beta diversity ordination (PCoA with Bray-Curtis)
 - PERMANOVA analysis (template provided)
 
-**Output:** `data/output/processed/rdata/alpha_beta_results.rda`
+**Output:** `data/output/rdata/alpha_beta_results.rda`
 
 ## Usage
 

@@ -17,24 +17,19 @@ source("R/utils/000_setup.R")
 # SECTION 1: Basic Exploration of Phyloseq
 #--------------------------------------------------------
 
-# Load the main phyloseq object
-if (!exists("oilcane_physeq")) {
-  load(here::here("data/output/processed/rdata/oilcane_physeq.rda"))
-}
-
 # Examine the structure
 cat("### OILCANE PHYLOSEQ OBJECT ###\n")
-explore_phyloseq(oilcane_physeq, name = "Oilcane All Timepoints")
+explore_phyloseq(main_oilcane_physeq, name = "Oilcane All Timepoints")
 
 # Summary table
 physeq_summary <- data.frame(
-  n_taxa = ntaxa(oilcane_physeq),
-  n_samples = nsamples(oilcane_physeq),
-  total_reads = sum(sample_sums(oilcane_physeq)),
-  min_reads_per_sample = min(sample_sums(oilcane_physeq)),
-  max_reads_per_sample = max(sample_sums(oilcane_physeq)),
-  mean_reads_per_sample = mean(sample_sums(oilcane_physeq)),
-  median_reads_per_sample = median(sample_sums(oilcane_physeq))
+  n_taxa = ntaxa(main_oilcane_physeq),
+  n_samples = nsamples(main_oilcane_physeq),
+  total_reads = sum(sample_sums(main_oilcane_physeq)),
+  min_reads_per_sample = min(sample_sums(main_oilcane_physeq)),
+  max_reads_per_sample = max(sample_sums(main_oilcane_physeq)),
+  mean_reads_per_sample = mean(sample_sums(main_oilcane_physeq)),
+  median_reads_per_sample = median(sample_sums(main_oilcane_physeq))
 )
 
 print(physeq_summary)
@@ -44,33 +39,26 @@ print(physeq_summary)
 #--------------------------------------------------------
 
 # Get read count data
-read_counts <- analyze_read_counts(oilcane_physeq)
+read_counts <- analyze_read_counts(main_oilcane_physeq)
 
 # Visualize read counts
 read_count_plots <- list(
   # Density plot
-  density = ggplot(read_counts, aes(x = n_seqs)) +
-    geom_density(alpha = 0.6, fill = "steelblue") +
+  density = ggplot(read_counts, aes(x = n_seqs, fill = sampling_time)) +
+    geom_density(alpha = 0.6) +
     labs(
       title = "Read Count Distribution",
       x = "Number of Sequences",
       y = "Density"
     ) +
     theme_minimal(),
-  
-  # Histogram
-  histogram = ggplot(read_counts, aes(x = n_seqs)) +
-    geom_histogram(bins = 30, fill = "steelblue", alpha = 0.7) +
-    labs(
-      title = "Read Count Distribution",
-      x = "Number of Sequences",
-      y = "Count"
-    ) +
-    theme_minimal(),
-  
+
   # Box plot
-  boxplot = ggplot(read_counts, aes(x = 1, y = n_seqs)) +
-    geom_boxplot(alpha = 0.7, fill = "steelblue") +
+  boxplot = ggplot(
+    read_counts,
+    aes(x = sampling_time, y = n_seqs, fill = sampling_time)
+  ) +
+    geom_boxplot(alpha = 0.7) +
     geom_jitter(width = 0.2, alpha = 0.5) +
     labs(
       title = "Read Count Distribution",
@@ -79,12 +67,12 @@ read_count_plots <- list(
     ) +
     theme_minimal() +
     theme(axis.text.x = element_blank(), axis.ticks.x = element_blank()),
-  
+
   # Ranked line plot
   ranked = read_counts %>%
     arrange(n_seqs) %>%
     mutate(sample_rank = row_number()) %>%
-    ggplot(aes(x = sample_rank, y = n_seqs)) +
+    ggplot(aes(x = sample_rank, y = n_seqs, )) +
     geom_line(linewidth = 1, color = "steelblue") +
     geom_point(alpha = 0.5) +
     labs(
@@ -92,13 +80,14 @@ read_count_plots <- list(
       x = "Sample Rank",
       y = "Number of Sequences"
     ) +
-    theme_minimal(),
-  
+    theme_minimal() +
+    facet_wrap(~sampling_time),
+
   # Good's coverage
   goods_coverage = read_counts %>%
-    ggplot(aes(x = n_seqs, y = goods)) +
-    geom_point(alpha = 0.6, color = "steelblue") +
-    geom_smooth(se = TRUE, color = "darkblue") +
+    ggplot(aes(x = n_seqs, y = goods, color = sampling_time)) +
+    geom_point(alpha = 0.6) +
+    geom_smooth(se = TRUE) +
     labs(
       title = "Good's Coverage vs Sequencing Depth",
       x = "Number of Sequences",
@@ -108,11 +97,8 @@ read_count_plots <- list(
 )
 
 # Display plots
-print(read_count_plots$density)
-print(read_count_plots$histogram)
-print(read_count_plots$boxplot)
-print(read_count_plots$ranked)
-print(read_count_plots$goods_coverage)
+read_count_plots
+
 
 #--------------------------------------------------------
 # SECTION 3: Rarefaction Curves with iNEXT
@@ -120,66 +106,95 @@ print(read_count_plots$goods_coverage)
 
 cat("\n### Running iNEXT for Rarefaction Curves ###\n")
 
-# Prepare OTU matrix for iNEXT
-otu_mat <- oilcane_physeq %>%
-  otu_table() %>%
-  data.frame() %>%
-  as.matrix()
+p_iNEXT_list <- function(physeq_obj, nCores = 1, type = 1, q = c(0, 1, 2)) {
+  # Helper function to make narrow lines
+  set_layer_param <- function(plot, i, param, value) {
+    if (!is.null(plot$layers[[i]]$aes_params)) {
+      plot$layers[[i]]$aes_params[[param]] <- value
+    }
+    plot
+  }
 
-# Transpose if taxa are not in rows
-if (!taxa_are_rows(oilcane_physeq)) {
-  otu_mat <- t(otu_mat)
+  # Prepare OTU matrix for iNEXT
+  otu_mat <- physeq_obj %>%
+    otu_table() %>%
+    data.frame() %>%
+    as.matrix()
+
+  # Transpose if taxa are not in rows
+  if (!taxa_are_rows(physeq_obj)) {
+    otu_mat <- t(otu_mat)
+  }
+
+  # Calculate endpoint
+  max_lib_size <- max(rowSums(t(otu_mat)))
+  endpoint <- max_lib_size * 1.25
+
+  cat("Max library size:", max_lib_size, "\n")
+  cat("Endpoint:", endpoint, "\n")
+
+  # Run parallel iNEXT
+  # Note: Adjust nCores based on available resources
+  options(future.globals.maxSize = 1500 * 1024^2)
+
+  inext_result <- p_iNEXT(
+    x = t(otu_mat), # samples in rows, taxa in columns
+    q = q,
+    endpoint = endpoint,
+    nboot = 100,
+    nCores = nCores,
+    combine = TRUE,
+    verbose = TRUE
+  )
+
+  # Create ggiNEXT plot
+  inext_plot <- ggiNEXT(
+    inext_result,
+    se = FALSE,
+    type = type,
+    facet.var = "Order.q",
+    color.var = "Assemblage"
+  ) +
+    theme_bw() +
+    labs(
+      title = "Rarefaction Curves - Oilcane All Timepoints",
+      x = "Number of Sequences"
+    ) +
+    guides(color = "none", shape = "none", fill = "none")
+
+  # We want narrow lines and no shape
+  narrow <- set_layer_param(inext_plot, 1, "size", 0)
+  narrow <- set_layer_param(inext_plot, 2, "linewidth", 0.5)
+
+  # assign back into your results list
+  inext_plot_narrow <- narrow
+
+  # Return both iNEXT result and plot
+  list(
+    inext_result = inext_result,
+    inext_plot = inext_plot
+  )
 }
 
-# Calculate endpoint
-max_lib_size <- max(rowSums(t(otu_mat)))
-endpoint <- max_lib_size * 2
 
-cat("Max library size:", max_lib_size, "\n")
-cat("Endpoint:", endpoint, "\n")
-
-# Run parallel iNEXT
-# Note: Adjust nCores based on available resources
-options(future.globals.maxSize = 1500 * 1024^2)
-
-inext_result <- p_iNEXT(
-  x = t(otu_mat),  # samples in rows, taxa in columns
-  q = c(0, 1, 2),
-  endpoint = endpoint,
-  nboot = 100,
+rarefaction_curves <- p_iNEXT_list(
+  main_oilcane_physeq,
   nCores = 4,
-  combine = TRUE,
-  verbose = TRUE
+  type = 1,
+  q = 0
 )
 
-# Create ggiNEXT plot
-library(iNEXT)  # Ensure iNEXT is loaded for ggiNEXT
-
-inext_plot <- ggiNEXT(
-  inext_result,
-  type = 1,
-  facet.var = "Order.q",
-  color.var = "Assemblage"
-) +
-  theme_bw() +
-  labs(
-    title = "Rarefaction Curves - Oilcane All Timepoints",
-    x = "Number of Sequences"
-  ) +
-  guides(color = "none", shape = "none", fill = "none")
-
-print(inext_plot)
-
+save(rarefaction_curves, file = "data/output/rdata/rarefaction_curves.rda")
 #--------------------------------------------------------
 # SECTION 4: Taxonomic Composition Overview
 #--------------------------------------------------------
 
 # Phylum-level composition
-if (!is.null(tax_table(oilcane_physeq, errorIfNULL = FALSE))) {
+if (!is.null(tax_table(main_oilcane_physeq, errorIfNULL = FALSE))) {
   cat("\n### Taxonomic Composition ###\n")
-  
+
   # Get top phyla
-  top_phyla <- oilcane_physeq %>%
+  top_phyla <- main_oilcane_physeq %>%
     tax_glom(taxrank = "Phylum") %>%
     transform_sample_counts(function(x) x / sum(x)) %>%
     psmelt() %>%
@@ -187,11 +202,11 @@ if (!is.null(tax_table(oilcane_physeq, errorIfNULL = FALSE))) {
     summarise(mean_abundance = mean(Abundance)) %>%
     arrange(desc(mean_abundance)) %>%
     head(10)
-  
+
   print(top_phyla)
-  
+
   # Plot top phyla
-  phylum_plot <- oilcane_physeq %>%
+  phylum_plot <- main_oilcane_physeq %>%
     tax_glom(taxrank = "Phylum") %>%
     transform_sample_counts(function(x) x / sum(x)) %>%
     psmelt() %>%
@@ -208,8 +223,9 @@ if (!is.null(tax_table(oilcane_physeq, errorIfNULL = FALSE))) {
       y = "Relative Abundance"
     ) +
     theme_minimal() +
-    theme(legend.position = "none")
-  
+    theme(legend.position = "none") +
+    facet_wrap(~sampling_time)
+
   print(phylum_plot)
 }
 
@@ -222,14 +238,15 @@ eda_results <- list(
   physeq_summary = physeq_summary,
   read_counts = read_counts,
   read_count_plots = read_count_plots,
-  inext_result = inext_result,
-  inext_plot = inext_plot
+  rarefaction_curves = rarefaction_curves,
+  top_phyla = top_phyla,
+  phylum_plot = phylum_plot
 )
 
 save(
   eda_results,
-  file = here::here("data/output/processed/rdata/eda_results.rda")
+  file = here::here("data/output/rdata/eda_results.rda")
 )
 
 cat("\n### EDA Complete ###\n")
-cat("Results saved to: data/output/processed/rdata/eda_results.rda\n")
+cat("Results saved to: data/output/rdata/eda_results.rda\n")

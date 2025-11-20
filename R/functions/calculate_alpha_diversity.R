@@ -10,21 +10,29 @@
 #' @return A data frame with alpha diversity metrics
 #'
 #' @export
-calculate_alpha_diversity <- function(physeq, measures = c("Observed", "Shannon", "Simpson", "InvSimpson")) {
+calculate_alpha_diversity <- function(
+  physeq,
+  row_to_col = "sample_id",
+  measures = c("Observed", "Shannon", "Simpson", "InvSimpson")
+) {
   # Calculate alpha diversity
   alpha <- phyloseq::estimate_richness(physeq, measures = measures)
-  
+
   # Add sample data if available
   if (!is.null(sample_data(physeq, errorIfNULL = FALSE))) {
     sample_df <- data.frame(sample_data(physeq))
-    alpha <- cbind(alpha, sample_df)
+    alpha <- cbind(sample_df, alpha)
   }
-  
+
   # Clean column names
   alpha <- alpha %>%
-    janitor::clean_names() %>%
-    tibble::rownames_to_column(var = "sample_id")
-  
+    janitor::clean_names()
+
+  if (!is.null(row_to_col)) {
+    alpha <- alpha %>%
+      tibble::rownames_to_column(var = row_to_col)
+  }
+
   return(alpha)
 }
 
@@ -40,7 +48,10 @@ calculate_alpha_diversity <- function(physeq, measures = c("Observed", "Shannon"
 #' @return A nested list with alpha diversity data frames
 #'
 #' @export
-calculate_alpha_diversity_nested <- function(physeq_list, measures = c("Observed", "Shannon", "Simpson", "InvSimpson")) {
+calculate_alpha_diversity_nested <- function(
+  physeq_list,
+  measures = c("Observed", "Shannon", "Simpson", "InvSimpson")
+) {
   purrr::imap(
     physeq_list,
     function(project_list, project_name) {

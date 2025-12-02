@@ -81,13 +81,13 @@ source("R/001_import.R")
 3. Loads phyloseq object for Timepoints 1 & 2
 4. Creates individual phyloseq objects for each timepoint
 5. Merges all timepoints into a single object
-6. Saves processed objects to `data/output/processed/rdata/`
+6. Saves processed objects to `data/output/rdata/`
 
 **Expected outputs:**
-- `data/output/processed/rdata/oilcane_t3_physeq.rda`
-- `data/output/processed/rdata/oilcane_t1_t2_physeq.rda`
-- `data/output/processed/rdata/oilcane_merged_physeq.rda`
-- `data/output/processed/rdata/oilcane_physeq.rda` (main object)
+- `data/output/rdata/oilcane_t3_physeq.rda`
+- `data/output/rdata/oilcane_t1_t2_physeq.rda`
+- `data/output/rdata/oilcane_merged_physeq.rda`
+- `data/output/rdata/oilcane_physeq.rda` (main object)
 
 **Console output should include:**
 - Summary of each phyloseq object
@@ -111,7 +111,7 @@ source("R/04_eda.R")
 6. Provides taxonomic composition overview
 
 **Expected outputs:**
-- `data/output/processed/rdata/eda_results.rda`
+- `data/output/rdata/eda_results.rda`
 - Multiple plots displayed in R graphics device:
   - Read count density plot
   - Read count histogram
@@ -142,7 +142,7 @@ source("R/05_alpha_beta_div.R")
 5. Provides templates for PERMANOVA analysis
 
 **Expected outputs:**
-- `data/output/processed/rdata/alpha_beta_results.rda`
+- `data/output/rdata/alpha_beta_results.rda`
 - Multiple plots displayed:
   - Individual alpha diversity metrics (4 plots)
   - Combined alpha diversity panel
@@ -164,9 +164,9 @@ To load and work with saved results in a new R session:
 source("R/utils/000_setup.R")
 
 # Load specific results
-load("data/output/processed/rdata/oilcane_physeq.rda")
-load("data/output/processed/rdata/eda_results.rda")
-load("data/output/processed/rdata/alpha_beta_results.rda")
+load("data/output/rdata/oilcane_physeq.rda")
+load("data/output/rdata/eda_results.rda")
+load("data/output/rdata/alpha_beta_results.rda")
 
 # Access results
 print(oilcane_physeq)
@@ -225,7 +225,7 @@ To verify the pipeline is working correctly:
 ```r
 # Check phyloseq object structure
 source("R/utils/000_setup.R")
-load("data/output/processed/rdata/oilcane_physeq.rda")
+load("data/output/rdata/oilcane_physeq.rda")
 
 # Basic checks
 ntaxa(oilcane_physeq)  # Should return number of taxa

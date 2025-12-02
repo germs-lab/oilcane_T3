@@ -32,6 +32,11 @@ alpha_diversity <- calculate_alpha_diversity(
 summary(alpha_diversity[, c("observed", "shannon", "simpson", "inv_simpson")])
 head(alpha_diversity)
 
+# Selecting for "Roots"
+
+root_alpha_diversity <- alpha_diversity %>%
+  filter(original_materials == "Roots")
+
 #--------------------------------------------------------
 # SECTION 2: Alpha Diversity Plots
 #--------------------------------------------------------
@@ -127,16 +132,48 @@ alpha_plots <- list(
 alpha_plots
 
 # Combined plot
-alpha_combined <- ggpubr::ggarrange(
-  alpha_plots$observed,
-  alpha_plots$shannon,
-  alpha_plots$simpson,
-  labels = c("A", "B", "C"),
-  nrow = 1,
-  ncol = 3
-)
+alpha_combined <- alpha_plots$observed +
+  alpha_plots$shannon +
+  alpha_plots$simpson +
+  patchwork::plot_annotation(tag_levels = 'A') &
+  theme(
+    plot.tag = element_text(face = "bold"),
+    plot.tag.position = c(0.1, 0.987)
+  )
 alpha_combined
 
+
+# Roots by genotype
+alpha_by_genotype_plots <- list(
+  observed = create_alpha_plot(
+    root_alpha_diversity,
+    group_var = "genotype",
+    "observed",
+    title = "Observed Richness"
+  ),
+  shannon = create_alpha_plot(
+    alpha_diversity,
+    group_var = "genotype",
+    "shannon",
+    title = "Shannon Diversity"
+  ),
+  simpson = create_alpha_plot(
+    alpha_diversity,
+    group_var = "genotype",
+    "simpson",
+    title = "Simpson Diversity"
+  ),
+  inv_simpson = create_alpha_plot(
+    alpha_diversity,
+    group_var = "genotype",
+    "inv_simpson",
+    title = "Inverse Simpson Diversity"
+  )
+)
+
+alpha_by_genotype_plots$observed
+alpha_by_genotype_plots$shannon
+alpha_by_genotype_plots$simpson
 #--------------------------------------------------------
 # SECTION 3: Beta Diversity Analysis (PCoA)
 #--------------------------------------------------------
@@ -178,9 +215,10 @@ pcoa_plot <- plot_ordination(
 
 print(pcoa_plot)
 
+# TODO
 #########################################################
 # Unfortunately, this plots has a horsheshoe shape.
-# This data needs Hellinger transformation or other.
+# This data needs Hellinger transformation or other. 2025-11-20
 #########################################################
 #--------------------------------------------------------
 # SECTION 5: PERMANOVA Analysis
@@ -252,10 +290,25 @@ alpha_beta_results <- list(
   pcoa_plot = pcoa_plot
 )
 
+# Root results
+root_alpha_results <- list(
+  overall_alpha_diversity = alpha_diversity,
+  root_alpha_diversity = root_alpha_diversity,
+  root_alpha_by_time_plots = alpha_combined,
+  root_alpha_by_genotype_plots = alpha_by_genotype_plots
+)
+
 save(
   alpha_beta_results,
-  file = here::here("data/output/rdata/alpha_beta_results.rda")
+  file = here::here("data/output/rdata/oilcane_alpha_beta_results.rda")
 )
+
+
+save(
+  root_alpha_results,
+  file = here::here("data/output/rdata/oilcane_root_alpha_results.rda")
+)
+
 
 cat("\n### Alpha and Beta Diversity Analysis Complete ###\n")
 cat("Results saved to: data/output/rdata/alpha_beta_results.rda\n")

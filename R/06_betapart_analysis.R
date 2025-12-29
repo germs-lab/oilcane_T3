@@ -409,8 +409,7 @@ cat("Results saved to: data/output/rdata/betapart_results.rda\n")
 
 cat("\n### Proposed Next Steps for Further Analysis ###\n\n")
 
-cat("1. STATISTICAL TESTING:\
-")
+cat("1. STATISTICAL TESTING:\n")
 cat("   - PERMANOVA on balanced vs gradient components\n")
 cat("   - Test if oilcane vs WT difference is significant\n")
 cat("   - Multi-factor analysis: genotype x timepoint x material\n\n")

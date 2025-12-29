@@ -35,7 +35,6 @@ calculate_betapart <- function(physeq, index.family = "bray") {
     as.data.frame()
 
   # Transpose if taxa are rows
-
   if (taxa_are_rows(physeq)) {
     otu_mat <- t(otu_mat)
   }
@@ -120,7 +119,6 @@ calculate_betapart_by_group <- function(physeq, group_var, index.family = "bray"
   sample_df <- data.frame(sample_data(physeq))
 
   # Check if group variable exists
-
   if (!group_var %in% colnames(sample_df)) {
     stop(paste("Variable", group_var, "not found in sample data"))
   }

@@ -12,12 +12,14 @@ oilcane_T3/
 │   │   ├── explore_phyloseq.R
 │   │   ├── calculate_alpha_diversity.R
 │   │   ├── calculate_beta_diversity.R
+│   │   ├── calculate_betapart.R  # Beta diversity partitioning
 │   │   └── analyze_read_counts.R
 │   ├── utils/              # Utility scripts
 │   │   └── 000_setup.R     # Common setup and library loading
 │   ├── 001_import.R        # Data import and phyloseq creation
 │   ├── 04_eda.R            # Exploratory data analysis
-│   └── 05_alpha_beta_div.R # Alpha and beta diversity analysis
+│   ├── 05_alpha_beta_div.R # Alpha and beta diversity analysis
+│   └── 06_betapart_analysis.R  # Beta diversity partitioning
 ├── data/
 │   ├── input/              # Input data files
 │   │   └── 16S_three_timepoints/
@@ -73,6 +75,22 @@ Calculates and visualizes diversity metrics:
 
 **Output:** `data/output/rdata/alpha_beta_results.rda`
 
+### 5. Beta Diversity Partitioning (`R/06_betapart_analysis.R`)
+
+Uses the `betapart` package to decompose Bray-Curtis dissimilarity into:
+- **Balanced variation (turnover)**: Differences due to species replacement
+- **Abundance gradient (nestedness-like)**: Differences due to abundance changes
+
+Key analyses include:
+- Oilcane vs Wild type comparison
+- Temporal patterns across T1, T2, T3
+- Genotype-specific patterns (Lineages 1-5 vs WT)
+- Sample type patterns (Roots, Soil, Leaves, Stalks)
+
+**Output:** `data/output/rdata/betapart_results.rda`
+
+**Key Question:** Do oilcane lineages have more balanced (turnover) Bray-Curtis dissimilarity compared to abundance gradients?
+
 ## Usage
 
 ### Running the Analysis
@@ -88,6 +106,7 @@ Calculates and visualizes diversity metrics:
    source("R/001_import.R")    # Import and process data
    source("R/04_eda.R")        # Exploratory analysis
    source("R/05_alpha_beta_div.R")  # Diversity analysis
+   source("R/06_betapart_analysis.R")  # Beta diversity partitioning
    ```
 
 ### Key Functions
@@ -99,6 +118,8 @@ Calculates and visualizes diversity metrics:
 #### Diversity Analysis
 - `calculate_alpha_diversity(physeq, measures)` - Calculate alpha diversity
 - `calculate_beta_diversity(physeq, method, distance)` - Calculate beta diversity ordination
+- `calculate_betapart(physeq, index.family)` - Partition beta diversity into balanced and gradient components
+- `calculate_betapart_by_group(physeq, group_var)` - Compare betapart across groups
 - `p_iNEXT(x, q, nCores, ...)` - Parallel iNEXT rarefaction curves
 
 ## Data
@@ -118,6 +139,7 @@ Main R packages:
 - vegan - Community ecology analysis
 - tidyverse - Data manipulation and visualization
 - iNEXT - Rarefaction and extrapolation
+- betapart - Beta diversity partitioning
 - microbiome - Microbiome analysis tools
 - metagMisc - Metagenomic analysis utilities
 - ggpubr - Publication-ready plots

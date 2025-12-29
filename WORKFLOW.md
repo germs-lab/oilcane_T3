@@ -153,6 +153,41 @@ source("R/05_alpha_beta_div.R")
 - Edit the script to uncomment and adjust the PERMANOVA section
 - Grouping variables for colored ordination plots may need adjustment
 
+### Step 4: Beta Diversity Partitioning (betapart)
+
+Run the betapart analysis script:
+
+```r
+source("R/06_betapart_analysis.R")
+```
+
+**What this does:**
+1. Decomposes Bray-Curtis dissimilarity into two components:
+   - **Balanced variation**: Species replacement (turnover)
+   - **Abundance gradient**: Differences due to abundance changes
+2. Compares oilcane lineages vs wild type
+3. Analyzes temporal patterns across T1, T2, T3
+4. Explores genotype and sample type effects
+5. Generates comprehensive visualizations
+
+**Key Research Question:**
+Do oilcane lineages have more balanced (turnover) Bray-Curtis dissimilarity than they have abundance gradients? This helps understand whether community differences are driven by species replacement or abundance changes.
+
+**Expected outputs:**
+- `data/output/rdata/betapart_results.rda`
+- Multiple plots displayed:
+  - Overall beta diversity partitioning
+  - Oilcane vs Wild type comparison
+  - Temporal patterns (T1, T2, T3)
+  - Genotype-specific patterns
+  - Sample type patterns
+  - Combined oilcane x timepoint analysis
+
+**Interpretation guide:**
+- High balanced proportion: Communities differ mainly due to species replacement
+- High gradient proportion: Communities differ mainly due to abundance changes
+- Compare oilcane vs wild type to determine if transgenic modifications affect community assembly patterns
+
 ## Working with the Results
 
 ### Loading Saved Results
@@ -167,11 +202,13 @@ source("R/utils/000_setup.R")
 load("data/output/rdata/oilcane_physeq.rda")
 load("data/output/rdata/eda_results.rda")
 load("data/output/rdata/alpha_beta_results.rda")
+load("data/output/rdata/betapart_results.rda")
 
 # Access results
 print(oilcane_physeq)
 names(eda_results)
 names(alpha_beta_results)
+names(betapart_results)
 ```
 
 ### Accessing Individual Components
@@ -192,6 +229,11 @@ print(beta_div$ordination)
 # iNEXT results from EDA
 inext_result <- eda_results$inext_result
 print(eda_results$inext_plot)
+
+# Betapart results
+print(betapart_results$summary)
+print(betapart_results$by_oilcane$group_comparison)
+print(betapart_results$plots$combined)
 ```
 
 ## Troubleshooting
@@ -266,10 +308,15 @@ After running the basic pipeline, consider:
    - Indicator species analysis
    - LEfSe analysis
 
+5. **Beta diversity partitioning**
+   - Run `R/06_betapart_analysis.R` for betapart analysis
+   - Compare balanced (turnover) vs gradient (abundance) components
+
 ## References
 
 - McMurdie, P.J. & Holmes, S. (2013) phyloseq: An R Package for Reproducible Interactive Analysis and Graphics of Microbiome Census Data. PLoS ONE 8(4): e61217.
 - Chao, A. et al. (2014) Rarefaction and extrapolation with Hill numbers: a framework for sampling and estimation in species diversity studies. Ecological Monographs 84(1): 45-67.
+- Baselga, A. (2010) Partitioning the turnover and nestedness components of beta diversity. Global Ecology and Biogeography 19: 134-143.
 
 ## Support
 
@@ -282,3 +329,4 @@ For package-specific issues:
 - phyloseq: https://joey711.github.io/phyloseq/
 - iNEXT: https://github.com/JohnsonHsieh/iNEXT
 - vegan: https://github.com/vegandevs/vegan
+- betapart: https://cran.r-project.org/package=betapart

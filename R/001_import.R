@@ -15,7 +15,7 @@ source("R/utils/000_setup.R")
 library(Biostrings) # for renaming ASVs
 
 #--------------------------------------------------------
-# Import Data Files
+# Import Data Files ----
 #--------------------------------------------------------
 
 # Set paths relative to project root
@@ -34,7 +34,7 @@ taxa <- readRDS(file.path(input_dir, "taxa.rds"))
 psssu <- readRDS(file.path(input_dir, "ps-ssu.rds"))
 
 #--------------------------------------------------------
-# Create Phyloseq Objects
+# Create Phyloseq Objects ----
 #--------------------------------------------------------
 
 # Timepoint 3
@@ -63,7 +63,7 @@ cat("\n### Timepoints 1 & 2 Phyloseq Object ###\n")
 print(oilcane_t1_t2_physeq)
 
 #--------------------------------------------------------
-# Merge All Studies
+# Merge All Studies ----
 #--------------------------------------------------------
 
 main_oilcane_physeq <- merge_phyloseq(oilcane_t1_t2_physeq, oilcane_t3_physeq)
@@ -72,7 +72,7 @@ cat("\n### Merged Phyloseq Object (All 3 Timepoints) ###\n")
 print(main_oilcane_physeq)
 
 #--------------------------------------------------------
-# Explore Merged Data
+# Explore Merged Data ----
 #--------------------------------------------------------
 
 # Basic exploration
@@ -87,7 +87,7 @@ cat("\nTaxonomic ranks:\n")
 print(rank_names(main_oilcane_physeq))
 
 #--------------------------------------------------------
-# Save Processed Objects
+# Save Processed Objects ----
 #--------------------------------------------------------
 
 # Create output directories if they don't exist

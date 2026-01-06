@@ -16,7 +16,7 @@
 source("R/utils/000_setup.R")
 
 #--------------------------------------------------------
-# SECTION 1: Alpha Diversity Analysis
+# SECTION 1: Alpha Diversity Analysis ----
 #--------------------------------------------------------
 
 cat("### Calculating Alpha Diversity ###\n")
@@ -38,7 +38,7 @@ root_alpha_diversity <- alpha_diversity %>%
   filter(original_materials == "Roots")
 
 #--------------------------------------------------------
-# SECTION 2: Alpha Diversity Plots
+# SECTION 2: Alpha Diversity Plots ----
 #--------------------------------------------------------
 
 cat("### Creating Alpha Diversity Plots ###\n")
@@ -175,7 +175,7 @@ alpha_by_genotype_plots$observed
 alpha_by_genotype_plots$shannon
 alpha_by_genotype_plots$simpson
 #--------------------------------------------------------
-# SECTION 3: Beta Diversity Analysis (PCoA)
+# SECTION 3: Beta Diversity Analysis (PCoA) ----
 #--------------------------------------------------------
 
 cat("\n### Calculating Beta Diversity (PCoA) ###\n")
@@ -190,7 +190,7 @@ beta_diversity <- calculate_beta_diversity(
 cat("Beta diversity ordination complete\n")
 
 #--------------------------------------------------------
-# SECTION 4: Beta Diversity Plots
+# SECTION 4: Beta Diversity Plots ----
 #--------------------------------------------------------
 
 cat("### Creating Beta Diversity Plots ###\n")
@@ -215,11 +215,7 @@ pcoa_plot <- plot_ordination(
 
 print(pcoa_plot)
 
-# TODO
-#########################################################
-# Unfortunately, this plots has a horsheshoe shape.
-# This data needs Hellinger transformation or other. 2025-11-20
-#########################################################
+
 #--------------------------------------------------------
 # SECTION 5: PERMANOVA Analysis
 #--------------------------------------------------------

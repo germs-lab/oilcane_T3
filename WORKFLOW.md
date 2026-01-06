@@ -99,7 +99,7 @@ source("R/001_import.R")
 Run the EDA script:
 
 ```r
-source("R/04_eda.R")
+source("R/03_eda.R")
 ```
 
 **What this does:**
@@ -131,7 +131,7 @@ source("R/04_eda.R")
 Run the diversity analysis script:
 
 ```r
-source("R/05_alpha_beta_div.R")
+source("R/04_alpha_beta_div.R")
 ```
 
 **What this does:**
@@ -158,7 +158,7 @@ source("R/05_alpha_beta_div.R")
 Run the betapart analysis script:
 
 ```r
-source("R/06_betapart_analysis.R")
+source("R/05_betapart_analysis.R")
 ```
 
 **What this does:**
@@ -323,7 +323,6 @@ After running the basic pipeline, consider:
 For issues specific to this pipeline:
 - Check the README.md for general information
 - Review function documentation in R/functions/
-- Consult reference repositories: germs_miscanthus and lightSABR
 
 For package-specific issues:
 - phyloseq: https://joey711.github.io/phyloseq/

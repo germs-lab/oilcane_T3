@@ -30,7 +30,7 @@ if (!requireNamespace("betapart", quietly = TRUE)) {
 library(betapart)
 
 #--------------------------------------------------------
-# SECTION 1: Overview and Data Preparation
+# SECTION 1: Overview and Data Preparation ----
 #--------------------------------------------------------
 
 cat("### Betapart Analysis: Beta Diversity Partitioning ###\n\n")
@@ -39,7 +39,9 @@ cat("### Betapart Analysis: Beta Diversity Partitioning ###\n\n")
 cat("Study Design Overview:\n")
 cat("- Genotypes: Lineage 1-5 (oilcane) vs Wild type (control)\n")
 cat("- Timepoints: T1, T2, T3 (maturity stages)\n")
-cat("- Sample types: Roots, Bulk soil, Root-associated soils, Leaves, Stalks\n\n")
+cat(
+  "- Sample types: Roots, Bulk soil, Root-associated soils, Leaves, Stalks\n\n"
+)
 
 # Check phyloseq object
 cat("Phyloseq object summary:\n")
@@ -62,13 +64,16 @@ cat("\nSample distribution:\n")
 print(table(sample_df$genotype, sample_df$sampling_time))
 
 #--------------------------------------------------------
-# SECTION 2: Overall Beta Diversity Partitioning
+# SECTION 2: Overall Beta Diversity Partitioning ----
 #--------------------------------------------------------
 
 cat("\n### SECTION 2: Overall Beta Diversity Partitioning ###\n")
 
 # Calculate betapart for entire dataset
-overall_betapart <- calculate_betapart(main_oilcane_physeq, index.family = "bray")
+overall_betapart <- calculate_betapart(
+  main_oilcane_physeq,
+  index.family = "bray"
+)
 
 cat("\nOverall Bray-Curtis dissimilarity decomposition:\n")
 print(overall_betapart$summary)
@@ -81,7 +86,7 @@ overall_plot <- plot_betapart_summary(
 print(overall_plot)
 
 #--------------------------------------------------------
-# SECTION 3: Compare Oilcane vs Wild Type
+# SECTION 3: Compare Oilcane vs Wild Type ----
 #--------------------------------------------------------
 
 cat("\n### SECTION 3: Oilcane vs Wild Type Comparison ###\n")
@@ -128,13 +133,17 @@ if (nrow(oilcane_row) > 0 && nrow(wt_row) > 0) {
     cat("\n>> Oilcane communities show MORE balanced (turnover) variation.\n")
     cat("   This suggests species replacement is more common in oilcane.\n")
   } else {
-    cat("\n>> Oilcane communities show LESS balanced variation than wild type.\n")
-    cat("   This suggests abundance gradients drive more of the dissimilarity.\n")
+    cat(
+      "\n>> Oilcane communities show LESS balanced variation than wild type.\n"
+    )
+    cat(
+      "   This suggests abundance gradients drive more of the dissimilarity.\n"
+    )
   }
 }
 
 #--------------------------------------------------------
-# SECTION 4: Compare by Timepoint
+# SECTION 4: Compare by Timepoint ----
 #--------------------------------------------------------
 
 cat("\n### SECTION 4: Temporal Patterns (T1, T2, T3) ###\n")
@@ -157,7 +166,7 @@ timepoint_plot <- plot_betapart_comparison(
 print(timepoint_plot)
 
 #--------------------------------------------------------
-# SECTION 5: Compare by Genotype
+# SECTION 5: Compare by Genotype ----
 #--------------------------------------------------------
 
 cat("\n### SECTION 5: Genotype-Specific Patterns ###\n")
@@ -180,7 +189,7 @@ genotype_plot <- plot_betapart_comparison(
 print(genotype_plot)
 
 #--------------------------------------------------------
-# SECTION 6: Sample Type Analysis
+# SECTION 6: Sample Type Analysis ----
 #--------------------------------------------------------
 
 cat("\n### SECTION 6: Sample Type Patterns ###\n")
@@ -203,7 +212,7 @@ material_plot <- plot_betapart_comparison(
 print(material_plot)
 
 #--------------------------------------------------------
-# SECTION 7: Combined Analysis (Oilcane x Timepoint)
+# SECTION 7: Combined Analysis (Oilcane x Timepoint) ----
 #--------------------------------------------------------
 
 cat("\n### SECTION 7: Oilcane vs WT Across Timepoints ###\n")
@@ -247,7 +256,10 @@ combined_plot <- ggplot(
   geom_bar(stat = "identity", position = "stack") +
   facet_wrap(~type) +
   scale_fill_manual(
-    values = c("Balanced (Turnover)" = "#2166AC", "Gradient (Abundance)" = "#B2182B"),
+    values = c(
+      "Balanced (Turnover)" = "#2166AC",
+      "Gradient (Abundance)" = "#B2182B"
+    ),
     name = "Component"
   ) +
   labs(
@@ -289,8 +301,12 @@ if (nrow(betapart_oilcane$group_comparison) > 0) {
       balanced_to_gradient_ratio = mean_balanced / mean_gradient
     ) %>%
     select(
-      analysis, n_samples, mean_balanced, mean_gradient,
-      mean_total, balanced_to_gradient_ratio
+      analysis,
+      n_samples,
+      mean_balanced,
+      mean_gradient,
+      mean_total,
+      balanced_to_gradient_ratio
     )
 }
 
@@ -337,8 +353,12 @@ if (nrow(oilcane_row) > 0 && nrow(wt_row) > 0) {
 
   if (bal_diff > 0.05) {
     cat("   >> FINDING: Oilcane shows substantially MORE balanced variation.\n")
-    cat("      Interpretation: Oilcane microbial communities show more species\n")
-    cat("      replacement patterns, suggesting distinct selection pressures.\n")
+    cat(
+      "      Interpretation: Oilcane microbial communities show more species\n"
+    )
+    cat(
+      "      replacement patterns, suggesting distinct selection pressures.\n"
+    )
   } else if (bal_diff < -0.05) {
     cat("   >> FINDING: Oilcane shows substantially LESS balanced variation.\n")
     cat("      Interpretation: Oilcane communities are more driven by\n")

@@ -14,7 +14,7 @@
 source("R/utils/000_setup.R")
 
 #--------------------------------------------------------
-# SECTION 1: Basic Exploration of Phyloseq
+# SECTION 1: Basic Exploration of Phyloseq ----
 #--------------------------------------------------------
 
 # Examine the structure
@@ -35,7 +35,7 @@ physeq_summary <- data.frame(
 print(physeq_summary)
 
 #--------------------------------------------------------
-# SECTION 2: Read Count Analysis
+# SECTION 2: Read Count Analysis ----
 #--------------------------------------------------------
 
 # Get read count data
@@ -101,7 +101,7 @@ read_count_plots
 
 
 #--------------------------------------------------------
-# SECTION 3: Rarefaction Curves with iNEXT
+# SECTION 3: Rarefaction Curves with iNEXT ----
 #--------------------------------------------------------
 
 cat("\n### Running iNEXT for Rarefaction Curves ###\n")
@@ -166,7 +166,7 @@ p_iNEXT_list <- function(physeq_obj, nCores = 1, type = 1, q = c(0, 1, 2)) {
   narrow <- set_layer_param(inext_plot, 1, "size", 0)
   narrow <- set_layer_param(inext_plot, 2, "linewidth", 0.5)
 
-  # assign back into your results list
+  # assign back into results list
   inext_plot_narrow <- narrow
 
   # Return both iNEXT result and plot
@@ -186,7 +186,7 @@ rarefaction_curves <- p_iNEXT_list(
 
 save(rarefaction_curves, file = "data/output/rdata/rarefaction_curves.rda")
 #--------------------------------------------------------
-# SECTION 4: Taxonomic Composition Overview
+# SECTION 4: Taxonomic Composition Overview ----
 #--------------------------------------------------------
 
 # Phylum-level composition
@@ -230,7 +230,7 @@ if (!is.null(tax_table(main_oilcane_physeq, errorIfNULL = FALSE))) {
 }
 
 #--------------------------------------------------------
-# SECTION 5: Save Results
+# SECTION 5: Save Results ----
 #--------------------------------------------------------
 
 # Save EDA results

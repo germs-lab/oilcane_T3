@@ -1,0 +1,145 @@
+### Betapart Analysis: Beta Diversity Partitioning ###
+
+Study Design Overview:
+- Genotypes: Lineage 1-5 (oilcane) vs Wild type (control)
+- Timepoints: T1, T2, T3 (maturity stages)
+- Sample types: Roots, Bulk soil, Root-associated soils, Leaves, Stalks
+
+Phyloseq object summary:
+phyloseq-class experiment-level object
+otu_table()   OTU Table:          [ 49275 taxa and 325 samples ]:
+sample_data() Sample Data:        [ 325 samples by 9 sample variables ]:
+tax_table()   Taxonomy Table:     [ 49275 taxa by 7 taxonomic ranks ]:
+refseq()      DNAStringSet:       [ 49275 reference sequences ]
+taxa are columns
+
+Sample distribution:
+           
+            T1 T2 T3
+  Lineage 1 20 20 16
+  Lineage 2 20 20 15
+  Lineage 3 20 20 16
+  Lineage 4 20 20 16
+  Lineage 5 18 20  8
+  Wild type 20 20 16
+
+### SECTION 2: Overall Beta Diversity Partitioning ###
+
+Overall Bray-Curtis dissimilarity decomposition:
+  component       mean        sd        min       max proportion_of_total
+1  balanced 0.79112692 0.2544924 0.00000000 1.0000000          0.93154417
+2  gradient 0.05813707 0.1052985 0.00000000 0.9704283          0.06845583
+3     total 0.84926399 0.1899210 0.02275962 1.0000000          1.00000000
+
+### SECTION 3: Oilcane vs Wild Type Comparison ###
+
+Comparison: Oilcane vs Wild Type
+      group n_samples mean_balanced mean_gradient mean_total prop_balanced prop_gradient
+1   Oilcane       269     0.7919488    0.05821402  0.8501628     0.9315260    0.06847397
+2 Wild type        56     0.7954334    0.05066377  0.8460972     0.9401206    0.05987938
+
+--- Interpretation ---
+Oilcane: 93.2% balanced, 6.8% gradient
+Wild type: 94.0% balanced, 6.0% gradient
+
+>> Oilcane communities show LESS balanced variation than wild type.
+   This suggests abundance gradients drive more of the dissimilarity.
+
+### SECTION 4: Temporal Patterns (T1, T2, T3) ###
+
+Beta diversity partitioning by timepoint:
+  group n_samples mean_balanced mean_gradient mean_total prop_balanced prop_gradient
+1    T2       120     0.7871900    0.06094898  0.8481390     0.9281380    0.07186202
+2    T1       118     0.7134717    0.07831591  0.7917877     0.9010898    0.09891024
+3    T3        87     0.6032753    0.08653320  0.6898085     0.8745547    0.12544525
+
+### SECTION 5: Genotype-Specific Patterns ###
+
+Beta diversity partitioning by genotype:
+      group n_samples mean_balanced mean_gradient mean_total prop_balanced prop_gradient
+1 Lineage 1        56     0.8046782    0.04612984  0.8508080     0.9457811    0.05421886
+2 Lineage 2        55     0.7789454    0.05742997  0.8363754     0.9313347    0.06866531
+3 Lineage 3        56     0.7925237    0.05864013  0.8511638     0.9311059    0.06889406
+4 Lineage 4        56     0.7867790    0.06841939  0.8551984     0.9199959    0.08000411
+5 Lineage 5        46     0.8211833    0.05094060  0.8721239     0.9415902    0.05840982
+6 Wild type        56     0.7954334    0.05066377  0.8460972     0.9401206    0.05987938
+
+### SECTION 6: Sample Type Patterns ###
+
+Beta diversity partitioning by sample type:
+                  group n_samples mean_balanced mean_gradient mean_total prop_balanced
+1                Leaves        47     0.1873206    0.20714158  0.3944622     0.4748760
+2                 Roots        48     0.7438511    0.05756124  0.8014123     0.9281752
+3 Root-associated soils        92     0.6300233    0.07785665  0.7078799     0.8900143
+4             Bulk soil        91     0.7522026    0.07030282  0.8225054     0.9145260
+5                Stalks        47     0.1104522    0.24551531  0.3559676     0.3102874
+  prop_gradient
+1    0.52512402
+2    0.07182475
+3    0.10998567
+4    0.08547398
+5    0.68971260
+
+### SECTION 7: Oilcane vs WT Across Timepoints ###
+
+Beta diversity: Oilcane status x Timepoint
+         group n_samples mean_balanced mean_gradient mean_total prop_balanced prop_gradient
+1   Oilcane_T2       100     0.7934826    0.06003929  0.8535219     0.9296570    0.07034300
+2   Oilcane_T1        98     0.7169532    0.07699642  0.7939496     0.9030210    0.09697897
+3 Wild type_T2        20     0.7575303    0.06710017  0.8246304     0.9186300    0.08136999
+4 Wild type_T1        20     0.7274661    0.05836912  0.7858353     0.9257235    0.07427653
+5   Oilcane_T3        71     0.5936867    0.09222704  0.6859138     0.8655413    0.13445866
+6 Wild type_T3        16     0.6475632    0.05991598  0.7074792     0.9153106    0.08468939
+
+### SECTION 8: Summary & Key Findings ###
+
+=== Final Summary Table ===
+          analysis n_samples mean_balanced mean_gradient mean_total balanced_to_gradient_ratio
+1          Overall       325     0.7911269    0.05813707  0.8492640                   13.60796
+2   Within Oilcane       269     0.7919488    0.05821402  0.8501628                   13.60409
+3 Within Wild type        56     0.7954334    0.05066377  0.8460972                   15.70024
+
+=== Key Findings ===
+
+1. OVERALL COMMUNITY STRUCTURE:
+   Total Bray-Curtis dissimilarity: 0.849
+   Balanced component: 0.791 (93.2%)
+   Gradient component: 0.058 (6.8%)
+
+2. OILCANE VS WILD TYPE:
+   Oilcane balanced proportion: 93.2%
+   Wild type balanced proportion: 94.0%
+   Difference: 0.9 percentage points
+   >> FINDING: Similar balance between turnover and abundance.
+      Interpretation: Both oilcane and wild type show similar
+      community assembly patterns.
+
+3. TEMPORAL PATTERNS:
+   T2: 92.8% balanced, 7.2% gradient
+   T1: 90.1% balanced, 9.9% gradient
+   T3: 87.5% balanced, 12.5% gradient
+
+4. GENOTYPE PATTERNS   Lineage 1: 94.6% balanced, 5.4% gradient
+   Lineage 2: 93.1% balanced, 6.9% gradient
+   Lineage 3: 93.1% balanced, 6.9% gradient
+   Lineage 4: 92.0% balanced, 8.0% gradient
+   Lineage 5: 94.2% balanced, 5.8% gradient
+   Wild type: 94.0% balanced, 6.0% gradient
+
+5. SAMPLE TYPE PATTERNS   Leaves: 47.5% balanced, 52.5% gradient
+   Roots: 92.8% balanced, 7.2% gradient
+   Root-associated soils: 89.0% balanced, 11.0% gradient
+   Bulk soil: 91.5% balanced, 8.5% gradient
+   Stalks: 31.0% balanced, 69.0% gradient
+
+6. COMBINED: OILCANE vs. WT ACROSS TIMEPOINTS   Oilcane_T2: 93.0% balanced, 7.0% gradient
+   Oilcane_T1: 90.3% balanced, 9.7% gradient
+   Wild type_T2: 91.9% balanced, 8.1% gradient
+   Wild type_T1: 92.6% balanced, 7.4% gradient
+   Oilcane_T3: 86.6% balanced, 13.4% gradient
+   Wild type_T3: 91.5% balanced, 8.5% gradient
+
+### Saving Results ###
+Results saved to: data/output/rdata/betapart_results.rda
+
+### Betapart Analysis Complete ###

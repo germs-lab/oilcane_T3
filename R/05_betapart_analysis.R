@@ -32,6 +32,7 @@ library(betapart)
 #--------------------------------------------------------
 # SECTION 1: Overview and Data Preparation ----
 #--------------------------------------------------------
+sink("data/output/rdata/betapart_output_log.txt")
 
 cat("### Betapart Analysis: Beta Diversity Partitioning ###\n\n")
 
@@ -274,7 +275,7 @@ combined_plot <- ggplot(
 print(combined_plot)
 
 #--------------------------------------------------------
-# SECTION 8: Statistical Summary & Conclusions
+# SECTION 8: Statistical Summary & Conclusions ----
 #--------------------------------------------------------
 
 cat("\n### SECTION 8: Summary & Key Findings ###\n")
@@ -371,30 +372,46 @@ if (nrow(oilcane_row) > 0 && nrow(wt_row) > 0) {
 }
 
 cat("\n3. TEMPORAL PATTERNS:\n")
-if (nrow(betapart_timepoint$group_comparison) > 0) {
-  for (i in seq_len(nrow(betapart_timepoint$group_comparison))) {
-    row <- betapart_timepoint$group_comparison[i, ]
-    cat(sprintf(
-      "   %s: %.1f%% balanced, %.1f%% gradient\n",
-      row$group,
-      row$prop_balanced * 100,
-      row$prop_gradient * 100
-    ))
+summary_patterns <- function(beta_result) {
+  if (nrow(beta_result$group_comparison) > 0) {
+    for (i in seq_len(nrow(beta_result$group_comparison))) {
+      row <- beta_result$group_comparison[i, ]
+      cat(sprintf(
+        "   %s: %.1f%% balanced, %.1f%% gradient\n",
+        row$group,
+        row$prop_balanced * 100,
+        row$prop_gradient * 100
+      ))
+    }
   }
 }
 
+summary_patterns(betapart_timepoint)
+
+cat("\n4. GENOTYPE PATTERNS")
+summary_patterns(betapart_genotype)
+
+cat("\n5. SAMPLE TYPE PATTERNS")
+summary_patterns(betapart_material)
+
+cat("\n6. COMBINED: OILCANE vs. WT ACROSS TIMEPOINTS")
+summary_patterns(betapart_combined)
+
+
 #--------------------------------------------------------
-# SECTION 9: Save Results
+# SECTION 9: Save Results ----
 #--------------------------------------------------------
 
 cat("\n### Saving Results ###\n")
 
 # Create output directory
-dir.create(
-  here::here("data/output/rdata"),
-  recursive = TRUE,
-  showWarnings = FALSE
-)
+if (!dir.exists(here::here("data/output/rdata"))) {
+  dir.create(
+    here::here("data/output/rdata"),
+    recursive = TRUE,
+    showWarnings = FALSE
+  )
+}
 
 # Compile all results
 betapart_results <- list(
@@ -423,31 +440,6 @@ save(
 
 cat("Results saved to: data/output/rdata/betapart_results.rda\n")
 
-#--------------------------------------------------------
-# SECTION 10: Proposed Next Steps
-#--------------------------------------------------------
-
-cat("\n### Proposed Next Steps for Further Analysis ###\n\n")
-
-cat("1. STATISTICAL TESTING:\n")
-cat("   - PERMANOVA on balanced vs gradient components\n")
-cat("   - Test if oilcane vs WT difference is significant\n")
-cat("   - Multi-factor analysis: genotype x timepoint x material\n\n")
-
-cat("2. PHYLOGENETIC CONSIDERATIONS:\n")
-cat("   - Use UniFrac-based betapart (requires phylogenetic tree)\n")
-cat("   - Compare taxonomic vs phylogenetic turnover\n\n")
-
-cat("3. INDICATOR SPECIES:\n")
-cat("   - Identify ASVs contributing to balanced variation\n")
-cat("   - Identify ASVs contributing to gradient variation\n\n")
-
-cat("4. TEMPORAL DYNAMICS:\n")
-cat("   - Track specific lineages across T1 -> T2 -> T3\n")
-cat("   - Identify if turnover increases or decreases with time\n\n")
-
-cat("5. FUNCTIONAL IMPLICATIONS:\n")
-cat("   - Link betapart results to predicted functions\n")
-cat("   - Test if functional diversity follows taxonomic patterns\n\n")
-
 cat("### Betapart Analysis Complete ###\n")
+
+sink()

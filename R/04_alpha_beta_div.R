@@ -135,7 +135,11 @@ alpha_plots
 alpha_combined <- alpha_plots$observed +
   alpha_plots$shannon +
   alpha_plots$simpson +
-  patchwork::plot_annotation(tag_levels = 'A') &
+  patchwork::plot_annotation(
+    title = "Alpha Diversity Metrics by Sampling Time",
+    subtitle = "All tissue types included",
+    tag_levels = 'A'
+  ) &
   theme(
     plot.tag = element_text(face = "bold"),
     plot.tag.position = c(0.1, 0.987)
@@ -144,7 +148,7 @@ alpha_combined
 
 
 # Roots by genotype
-alpha_by_genotype_plots <- list(
+alpha_root_by_genotype_plots <- list(
   observed = create_alpha_plot(
     root_alpha_diversity,
     group_var = "genotype",
@@ -152,28 +156,82 @@ alpha_by_genotype_plots <- list(
     title = "Observed Richness"
   ),
   shannon = create_alpha_plot(
-    alpha_diversity,
+    root_alpha_diversity,
     group_var = "genotype",
     "shannon",
     title = "Shannon Diversity"
   ),
   simpson = create_alpha_plot(
-    alpha_diversity,
+    root_alpha_diversity,
     group_var = "genotype",
     "simpson",
     title = "Simpson Diversity"
   ),
   inv_simpson = create_alpha_plot(
-    alpha_diversity,
+    root_alpha_diversity,
     group_var = "genotype",
     "inv_simpson",
     title = "Inverse Simpson Diversity"
   )
 )
 
-alpha_by_genotype_plots$observed
-alpha_by_genotype_plots$shannon
-alpha_by_genotype_plots$simpson
+alpha_root_genotype_combined <- alpha_root_by_genotype_plots$observed +
+  alpha_root_by_genotype_plots$shannon +
+  alpha_root_by_genotype_plots$simpson +
+  patchwork::plot_annotation(
+    title = "Root Alpha Diversity Metrics by Genotype",
+    subtitle = "T1 & T2 root samples available only",
+    tag_levels = 'A'
+  ) &
+  theme(
+    plot.tag = element_text(face = "bold"),
+    plot.tag.position = c(0.1, 0.987)
+  )
+
+alpha_root_genotype_combined
+
+alpha_roots_by_time_plots <- list(
+  observed = create_alpha_plot(
+    root_alpha_diversity,
+    group_var = "sampling_time",
+    "observed",
+    title = "Observed Richness"
+  ),
+  shannon = create_alpha_plot(
+    root_alpha_diversity,
+    group_var = "sampling_time",
+    "shannon",
+    title = "Shannon Diversity"
+  ),
+  simpson = create_alpha_plot(
+    root_alpha_diversity,
+    group_var = "sampling_time",
+    "simpson",
+    title = "Simpson Diversity"
+  ),
+  inv_simpson = create_alpha_plot(
+    root_alpha_diversity,
+    group_var = "sampling_time",
+    "inv_simpson",
+    title = "Inverse Simpson Diversity"
+  )
+)
+
+alpha_root_time_combined <- alpha_roots_by_time_plots$observed +
+  alpha_roots_by_time_plots$shannon +
+  alpha_roots_by_time_plots$simpson +
+  patchwork::plot_annotation(
+    title = "Root Alpha Diversity Metrics by Sampling Time",
+    subtitle = "T1 & T2 root samples available only",
+    tag_levels = 'A'
+  ) &
+  theme(
+    plot.tag = element_text(face = "bold"),
+    plot.tag.position = c(0.1, 0.987)
+  )
+
+alpha_root_time_combined
+
 #--------------------------------------------------------
 # SECTION 3: Beta Diversity Analysis (PCoA) ----
 #--------------------------------------------------------
@@ -280,19 +338,15 @@ print(alpha_summary_overall)
 alpha_beta_results <- list(
   alpha_diversity = alpha_diversity,
   alpha_plots = alpha_plots,
-  alpha_combined = alpha_combined,
+  alpha_plots_combined = alpha_combined,
   alpha_summary = alpha_summary_overall,
+  root_alpha_diversity = root_alpha_diversity,
+  root_alpha_by_time_plots = alpha_root_time_combined,
+  root_alpha_by_genotype_plots = alpha_root_genotype_combined,
   beta_diversity = beta_diversity,
   pcoa_plot = pcoa_plot
 )
 
-# Root results
-root_alpha_results <- list(
-  overall_alpha_diversity = alpha_diversity,
-  root_alpha_diversity = root_alpha_diversity,
-  root_alpha_by_time_plots = alpha_combined,
-  root_alpha_by_genotype_plots = alpha_by_genotype_plots
-)
 
 save(
   alpha_beta_results,
@@ -300,11 +354,8 @@ save(
 )
 
 
-save(
-  root_alpha_results,
-  file = here::here("data/output/rdata/oilcane_root_alpha_results.rda")
-)
-
-
 cat("\n### Alpha and Beta Diversity Analysis Complete ###\n")
-cat("Results saved to: data/output/rdata/alpha_beta_results.rda\n")
+cat("Results (overall and roots) saved to: data/output/rdata/oilcane_alpha_beta_results.rda\n")
+cat(
+  "Root alpha diversity results saved to: data/output/rdata/oilcane_root_alpha_results.rda\n"
+)

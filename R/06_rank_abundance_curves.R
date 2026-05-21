@@ -131,14 +131,20 @@ cat("\nT2 Field:\n")
 print(physeq_t2_field)
 
 # T3 -- includes both Field and Greenhouse samples (second field timepoint)
-physeq_t3 <- subset_samples(
+physeq_t3_field <- subset_samples(
   main_oilcane_physeq,
-  sampling_time == "T3"
+  sampling_time == "T3" & growing_condition == "Field"
 )
-physeq_t3 <- prune_taxa(taxa_sums(physeq_t3) > 0, physeq_t3)
+physeq_t3_field <- prune_taxa(taxa_sums(physeq_t3_field) > 0, physeq_t3_field)
 
-cat("\nT3 (Field + Greenhouse):\n")
-print(physeq_t3)
+cat("\nT3 Field:\n")
+print(physeq_t3_field)
+
+physeq_t3_gh <- subset_samples(
+  main_oilcane_physeq,
+  sampling_time == "T3" & growing_condition == "Greenhouse"
+)
+physeq_t3_gh <- prune_taxa(taxa_sums(physeq_t3_gh) > 0, physeq_t3_gh)
 
 #--------------------------------------------------------
 # SECTION 3: Build Rank-Abundance Data Frames ----
@@ -146,7 +152,8 @@ print(physeq_t3)
 
 ra_t1 <- build_rank_abundance_df(physeq_t1_gh, group_var = "genotype")
 ra_t2 <- build_rank_abundance_df(physeq_t2_field, group_var = "genotype")
-ra_t3 <- build_rank_abundance_df(physeq_t3, group_var = "genotype")
+ra_t3_field <- build_rank_abundance_df(physeq_t3_field, group_var = "genotype")
+ra_t3_gh <- build_rank_abundance_df(physeq_t3_gh, group_var = "genotype")
 
 #--------------------------------------------------------
 # SECTION 4: Plot -- Separate Panels per Dataset ----
@@ -164,15 +171,22 @@ p_t2 <- plot_rank_abundance(
   group_var = "genotype"
 )
 
-p_t3 <- plot_rank_abundance(
-  ra_t3,
-  title = "Rank Abundance - \nT3 Field + Greenhouse",
+p_t3_field <- plot_rank_abundance(
+  ra_t3_field,
+  title = "Rank Abundance - \nT3 Field",
+  group_var = "genotype"
+)
+
+p_t3_gh <- plot_rank_abundance(
+  ra_t3_gh,
+  title = "Rank Abundance - \nT3 Greenhouse",
   group_var = "genotype"
 )
 
 p_t1
 p_t2
-p_t3
+p_t3_field
+p_t3_gh
 
 # Combined panel for convenience
 ra_combined_plot <- patchwork::wrap_plots(
